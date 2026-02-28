@@ -83,8 +83,31 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
         ),
         bullets=(
             "PowerShell (sessão atual): $env:GITHUB_TOKEN='seu_token'",
-            "PowerShell (persistente): setx GITHUB_TOKEN \"seu_token\"",
+            "PowerShell (persistente - usuário): setx GITHUB_TOKEN \"seu_token\"",
+            "PowerShell (persistente - sistema): setx GITHUB_TOKEN \"seu_token\" /M",
             "Após usar setx, abra um novo terminal/VS Code para a variável ser carregada.",
+        ),
+    ),
+    ManualSection(
+        id="token-pela-interface",
+        title="Definir token pela interface (recomendado)",
+        bullets=(
+            "Abra Configurações > Definir token GitHub (Ctrl+Shift+T).",
+            "Cole o token e confirme em OK.",
+            "No Windows, o aplicativo tenta gravar o token em Variáveis de Usuário e Variáveis de Sistema.",
+            "A gravação em Variáveis de Sistema pode solicitar confirmação de administrador (UAC).",
+            "Se apenas uma parte da gravação funcionar, o app informa os detalhes e continua a execução atual com o token informado.",
+        ),
+    ),
+    ManualSection(
+        id="reset-token-variaveis",
+        title="Resetar token e variáveis de ambiente",
+        bullets=(
+            "Abra Configurações > Resetar Token/Variáveis de Ambiente (Ctrl+Shift+R).",
+            "O app solicita confirmação e mostra os arquivos locais que também serão removidos.",
+            "A ação remove token de usuário, token de sistema, sessão atual e chaves de Registro relacionadas.",
+            "Também remove os arquivos locais .github_follow_compare_antigo.json e .github_follow_compare_atual.json.",
+            "Ao final, o aplicativo reinicia automaticamente para aplicar as mudanças.",
         ),
     ),
     ManualSection(
@@ -103,6 +126,7 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
         bullets=(
             "Informe o usuário GitHub no campo \"Usuário GitHub\".",
             "Clique em \"▶️ Executar\" para carregar/atualizar dados.",
+            "Se o token estiver ausente e não houver cache utilizável, o app pode solicitar o token em janela de diálogo.",
             "Leia o resumo de contagens no topo.",
             "Navegue pelas abas para analisar os perfis por categoria.",
             "Use a opção \"Forçar atualização da API (ignorar cache por 15 min)\" quando quiser dados de rede imediatos.",
@@ -174,10 +198,20 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
             "Novo (Ctrl+N): limpa interface e reseta arquivos locais de cache/estado.",
             "Abrir (Ctrl+O): importa JSON de cache, estado ou pacote combinado.",
             "Salvar (Ctrl+S): exporta um pacote JSON com \"atual\" e \"antigo\".",
+            "Excluir (Ctrl+Shift+D): mostra os arquivos de banco existentes e pede confirmação para excluir.",
+            "Se não existir nenhum arquivo de banco local, o aplicativo informa isso na janela de diálogo.",
             "Ajuda (F1): mostra atalhos disponíveis.",
             "Fechar (Ctrl+Q): fecha a aplicação.",
-            "Idioma (Alt+I): alterna pt_BR/en_US em tempo real.",
-            "Manual (Ctrl+Shift+M) e Sobre (Ctrl+Shift+A) no menu Opções.",
+        ),
+    ),
+    ManualSection(
+        id="menu-configuracoes-opcoes",
+        title="Menu Configurações, Idioma e Opções",
+        bullets=(
+            "Definir token GitHub (Ctrl+Shift+T): abre diálogo para colar token e salvar no ambiente.",
+            "Resetar Token/Variáveis de Ambiente (Ctrl+Shift+R): remove token, arquivos locais e reinicia o app.",
+            "Idioma (Alt+I): submenu em Configurações para alternar pt_BR/en_US em tempo real.",
+            "Manual (Ctrl+Shift+M) e Sobre (Ctrl+Shift+A) ficam no menu Opções.",
         ),
     ),
     ManualSection(
@@ -196,6 +230,7 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
         bullets=(
             ".github_follow_compare_atual.json: snapshot atual com followers/following e resultados calculados.",
             ".github_follow_compare_antigo.json: snapshot anterior para histórico de mudanças.",
+            "Esses arquivos podem ser removidos por Arquivo > Excluir ou durante o reset de token em Configurações.",
             "Os caminhos podem ser customizados por variável de ambiente:",
             "FOLLOW_COMPARE_CACHE_FILE (arquivo atual) e FOLLOW_COMPARE_STATE_FILE (arquivo antigo).",
             "O diretório base persistente vem de source.utils.obter_caminho_persistente().",
@@ -219,6 +254,15 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
                 bullets=(
                     "Mensagem típica: Defina GITHUB_TOKEN para usar GraphQL sem cache.",
                     "Defina a variável de ambiente e execute novamente.",
+                    "Você também pode usar Configurações > Definir token GitHub para configurar pelo próprio aplicativo.",
+                ),
+            ),
+            ManualDetails(
+                summary="Token salvo parcialmente (Windows)",
+                bullets=(
+                    "Pode ocorrer quando o escopo de usuário salva, mas o escopo de sistema exige permissão de administrador.",
+                    "Confirme o prompt UAC quando solicitado ou execute o app/terminal com privilégios administrativos.",
+                    "Mesmo com salvamento parcial, a execução atual pode continuar usando o token informado.",
                 ),
             ),
             ManualDetails(
@@ -233,6 +277,14 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
                 bullets=(
                     "Verifique permissões de escrita na pasta alvo.",
                     "Confirme se o arquivo segue o formato esperado (cache/estado/pacote).",
+                ),
+            ),
+            ManualDetails(
+                summary="Excluir banco local não removeu tudo",
+                bullets=(
+                    "O menu Excluir remove os arquivos que existem no momento da confirmação.",
+                    "Se não houver arquivos, a janela informa que não há banco local para excluir.",
+                    "Se apenas um arquivo existir, apenas ele será listado/removido.",
                 ),
             ),
             ManualDetails(

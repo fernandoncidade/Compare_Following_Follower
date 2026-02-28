@@ -47,10 +47,7 @@ def get_compare_data(session: requests.Session, user: str, force_refresh: bool =
             if stale_cache is not None:
                 return stale_cache
 
-            raise core.ConfigError(
-                "Defina GITHUB_TOKEN para usar GraphQL sem cache. "
-                "PowerShell: $env:GITHUB_TOKEN='seu_token'."
-            )
+            raise core.ConfigError("Defina GITHUB_TOKEN para usar o GraphQL sem cache.")
 
         try:
             fresh_data = core.fetch_relationships_graphql(session, user)

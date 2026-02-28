@@ -1,11 +1,43 @@
 RELEASE NOTES - Compare - Following and Follower
+Version: 2026.2.28.0
+Date: February 28, 2026
+
+Version summary
+This release focuses on making GitHub access setup easier and giving users more control over local app data, with confirmation-guided flows.
+
+Main updates
+- New flow to set the GitHub token directly in the interface.
+- Token saving to both user and system environment variables on Windows (when allowed).
+- New option to reset token and environment variables from the Settings menu.
+- During reset, the app also removes related local data and restarts automatically.
+- New "Delete" action in the File menu to remove local database files with confirmation.
+- The delete dialog now lists only files that actually exist.
+- When no local files exist, the app clearly informs the user before any action.
+
+Usability improvements
+- New shortcuts for frequent actions:
+  - Ctrl+Shift+D (Delete local database)
+  - Ctrl+Shift+T (Set GitHub token)
+  - Ctrl+Shift+R (Reset token/variables)
+- Clearer success, warning, and error messages during setup, reset, and deletion.
+- More assisted flow when token is missing: the app can request a token and continue the current process.
+
+Reliability improvements
+- The app now makes better use of tokens already saved in the system, even when the current session had not loaded the variable yet.
+- In partial-permission scenarios, the app reports what was completed to reduce confusion.
+
+Compatibility and data
+- Local data format was preserved.
+- No manual migration is required to keep using the app.
+
+_________________________________________________
+
+RELEASE NOTES - Compare - Following and Follower
 Version: 2026.2.26.0
 Date: February 26, 2026
 
 Version summary
-This version marks the consolidation of the Compare - Following and Follower project as an app focused on
-GitHub relationship comparison, with a more complete usage flow, useful shortcuts,
-and a better organized interface experience.
+This version marks the consolidation of the Compare - Following and Follower project as an app focused on GitHub relationship comparison, with a more complete usage flow, useful shortcuts, and a better organized interface experience.
 
 Main updates
 - New File menu with actions:
@@ -59,6 +91,5 @@ Suggested next steps
 - Expand indicators for historical network growth metrics.
 
 Final note
-If this version were a story, it would be the chapter where the app stops being
-"a useful tool" and becomes "a social audit companion on GitHub."
+If this version were a story, it would be the chapter where the app stops being "a useful tool" and becomes "a social audit companion on GitHub."
 Less chaos, more context.

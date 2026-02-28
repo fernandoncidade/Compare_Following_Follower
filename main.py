@@ -1,4 +1,3 @@
-import sys
 from source import main, format_exception
 from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()

@@ -13,9 +13,12 @@ class CompareMenuBar:
     settings_menu: QMenu
     options_menu: QMenu
     language_menu: QMenu
+    action_set_github_token: QAction
+    action_reset_github_token: QAction
     action_new: QAction
     action_open: QAction
     action_save: QAction
+    action_delete: QAction
     action_help: QAction
     action_close: QAction
     action_manual: QAction
@@ -28,9 +31,12 @@ class CompareMenuBar:
         self.action_new.setText(self._resolve_label("Novo", "New"))
         self.action_open.setText(self._resolve_label("Abrir", "Open"))
         self.action_save.setText(self._resolve_label("Salvar", "Save"))
+        self.action_delete.setText(self._resolve_label("Excluir", "Delete"))
         self.action_help.setText(self._resolve_label("Ajuda", "Help"))
         self.action_close.setText(self._resolve_label("Fechar", "Close"))
         self.settings_menu.setTitle(self._resolve_label("Configurações", "Settings"))
+        self.action_set_github_token.setText(self._resolve_label("Definir token GitHub", "Set GitHub token"))
+        self.action_reset_github_token.setText(self._resolve_label("Resetar Token/Variáveis de Ambiente", "Reset Token/Environment Variables"))
         self.options_menu.setTitle(self._resolve_label("Opções", "Options"))
         self.action_manual.setText(self._resolve_label("Manual", "Manual"))
         self.action_about.setText(self._resolve_label("Sobre", "About"))
@@ -63,8 +69,11 @@ def build_compare_menu_bar(
     on_new_selected: Callable[[], None] | None = None,
     on_open_selected: Callable[[], None] | None = None,
     on_save_selected: Callable[[], None] | None = None,
+    on_delete_selected: Callable[[], None] | None = None,
     on_help_selected: Callable[[], None] | None = None,
     on_close_selected: Callable[[], None] | None = None,
+    on_set_github_token_selected: Callable[[], None] | None = None,
+    on_reset_github_token_selected: Callable[[], None] | None = None,
     on_manual_selected: Callable[[], None] | None = None,
     on_about_selected: Callable[[], None] | None = None,
     current_language: str | None = None,
@@ -86,6 +95,10 @@ def build_compare_menu_bar(
     action_save.setShortcut(QKeySequence("Ctrl+S"))
     file_menu.addAction(action_save)
 
+    action_delete = QAction(menu_bar)
+    action_delete.setShortcut(QKeySequence("Ctrl+Shift+D"))
+    file_menu.addAction(action_delete)
+
     action_help = QAction(menu_bar)
     action_help.setShortcut(QKeySequence("F1"))
     file_menu.addAction(action_help)
@@ -98,6 +111,16 @@ def build_compare_menu_bar(
 
     settings_menu = QMenu(menu_bar)
     menu_bar.addMenu(settings_menu)
+
+    action_set_github_token = QAction(menu_bar)
+    action_set_github_token.setShortcut(QKeySequence("Ctrl+Shift+T"))
+    settings_menu.addAction(action_set_github_token)
+
+    action_reset_github_token = QAction(menu_bar)
+    action_reset_github_token.setShortcut(QKeySequence("Ctrl+Shift+R"))
+    settings_menu.addAction(action_reset_github_token)
+
+    settings_menu.addSeparator()
 
     language_menu = QMenu(settings_menu)
     language_menu.menuAction().setShortcut(QKeySequence("Alt+I"))
@@ -150,11 +173,20 @@ def build_compare_menu_bar(
     if on_save_selected is not None:
         action_save.triggered.connect(lambda _checked=False: on_save_selected())
 
+    if on_delete_selected is not None:
+        action_delete.triggered.connect(lambda _checked=False: on_delete_selected())
+
     if on_help_selected is not None:
         action_help.triggered.connect(lambda _checked=False: on_help_selected())
 
     if on_close_selected is not None:
         action_close.triggered.connect(lambda _checked=False: on_close_selected())
+
+    if on_set_github_token_selected is not None:
+        action_set_github_token.triggered.connect(lambda _checked=False: on_set_github_token_selected())
+
+    if on_reset_github_token_selected is not None:
+        action_reset_github_token.triggered.connect(lambda _checked=False: on_reset_github_token_selected())
 
     actions_group.triggered.connect(_handle_language_selected)
 
@@ -163,9 +195,12 @@ def build_compare_menu_bar(
         file_menu=file_menu,
         settings_menu=settings_menu,
         language_menu=language_menu,
+        action_set_github_token=action_set_github_token,
+        action_reset_github_token=action_reset_github_token,
         action_new=action_new,
         action_open=action_open,
         action_save=action_save,
+        action_delete=action_delete,
         action_help=action_help,
         action_close=action_close,
         action_manual=action_manual,

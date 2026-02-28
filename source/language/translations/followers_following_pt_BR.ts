@@ -165,6 +165,21 @@
     </message>
 
     <message>
+      <source>Defina GITHUB_TOKEN para usar o GraphQL sem cache.</source>
+      <translation>Defina GITHUB_TOKEN para usar o GraphQL sem cache.</translation>
+    </message>
+
+    <message>
+      <source>PowerShell: $env:GITHUB_TOKEN='seu_token'.</source>
+      <translation>PowerShell: $env:GITHUB_TOKEN='seu_token'.</translation>
+    </message>
+
+    <message>
+      <source>Defina GITHUB_TOKEN para usar o GraphQL sem cache. PowerShell: $env:GITHUB_TOKEN='seu_token'.</source>
+      <translation>Defina GITHUB_TOKEN para usar o GraphQL sem cache. PowerShell: $env:GITHUB_TOKEN='seu_token'.</translation>
+    </message>
+
+    <message>
       <source>Confirmar unfollow</source>
       <translation>Confirmar unfollow</translation>
     </message>
@@ -470,6 +485,259 @@ Falhas: {failed}</translation>
     <message>
       <source>Ajuda - Atalhos</source>
       <translation>Ajuda - Atalhos</translation>
+    </message>
+
+    <message>
+      <source>Excluir</source>
+      <translation>Excluir</translation>
+    </message>
+
+    <message>
+      <source>Definir token GitHub</source>
+      <translation>Definir token GitHub</translation>
+    </message>
+
+    <message>
+      <source>Resetar Token/Variáveis de Ambiente</source>
+      <translation>Resetar Token/Variáveis de Ambiente</translation>
+    </message>
+
+    <message>
+      <source>Os arquivos do banco de dados não existem.
+
+{state_file}
+{cache_file}</source>
+      <translation>Os arquivos do banco de dados não existem.
+
+{state_file}
+{cache_file}</translation>
+    </message>
+
+    <message>
+      <source>Deseja excluir o banco de dados?
+
+Arquivos existentes:
+{existing_paths}</source>
+      <translation>Deseja excluir o banco de dados?
+
+Arquivos existentes:
+{existing_paths}</translation>
+    </message>
+
+    <message>
+      <source>Sucesso</source>
+      <translation>Sucesso</translation>
+    </message>
+
+    <message>
+      <source>Erro</source>
+      <translation>Erro</translation>
+    </message>
+
+    <message>
+      <source>Arquivos do banco de dados excluídos com sucesso!</source>
+      <translation>Arquivos do banco de dados excluídos com sucesso!</translation>
+    </message>
+
+    <message>
+      <source>Falha ao excluir os arquivos do banco de dados!</source>
+      <translation>Falha ao excluir os arquivos do banco de dados!</translation>
+    </message>
+
+    <message>
+      <source>Arquivo removido.</source>
+      <translation>Arquivo removido.</translation>
+    </message>
+
+    <message>
+      <source>Arquivo não encontrado (já removido).</source>
+      <translation>Arquivo não encontrado (já removido).</translation>
+    </message>
+
+    <message>
+      <source>Resetar token GitHub</source>
+      <translation>Resetar token GitHub</translation>
+    </message>
+
+    <message>
+      <source>Esta ação irá:
+1) Remover variável persistente do usuário atual;
+2) Remover variável persistente do sistema (Machine);
+3) Remover da sessão atual;
+4) Remover do Registro - Escopo Usuário;
+5) Remover do Registro - Escopo Sistema.
+
+Também irá excluir os arquivos abaixo e reiniciar o aplicativo:
+{state_file}
+{cache_file}
+
+Deseja continuar?</source>
+      <translation>Esta ação irá:
+1) Remover variável persistente do usuário atual;
+2) Remover variável persistente do sistema (Machine);
+3) Remover da sessão atual;
+4) Remover do Registro - Escopo Usuário;
+5) Remover do Registro - Escopo Sistema.
+
+Também irá excluir os arquivos abaixo e reiniciar o aplicativo:
+{state_file}
+{cache_file}
+
+Deseja continuar?</translation>
+    </message>
+
+    <message>
+      <source>Usuário</source>
+      <translation>Usuário</translation>
+    </message>
+
+    <message>
+      <source>Sistema</source>
+      <translation>Sistema</translation>
+    </message>
+
+    <message>
+      <source>Sessão atual</source>
+      <translation>Sessão atual</translation>
+    </message>
+
+    <message>
+      <source>removida</source>
+      <translation>removida</translation>
+    </message>
+
+    <message>
+      <source>não removida</source>
+      <translation>não removida</translation>
+    </message>
+
+    <message>
+      <source>Token, variáveis de ambiente e arquivos locais removidos com sucesso.
+O aplicativo será reiniciado.
+
+Detalhes:
+</source>
+      <translation>Token, variáveis de ambiente e arquivos locais removidos com sucesso.
+O aplicativo será reiniciado.
+
+Detalhes:
+</translation>
+    </message>
+
+    <message>
+      <source>A ação foi concluída parcialmente.
+O aplicativo será reiniciado.
+
+Detalhes:
+</source>
+      <translation>A ação foi concluída parcialmente.
+O aplicativo será reiniciado.
+
+Detalhes:
+</translation>
+    </message>
+
+    <message>
+      <source>Não foi possível concluir o reset.
+O aplicativo tentará reiniciar mesmo assim.
+
+Detalhes:
+</source>
+      <translation>Não foi possível concluir o reset.
+O aplicativo tentará reiniciar mesmo assim.
+
+Detalhes:
+</translation>
+    </message>
+
+    <message>
+      <source>Falha ao reiniciar automaticamente. Reinicie o aplicativo manualmente.</source>
+      <translation>Falha ao reiniciar automaticamente. Reinicie o aplicativo manualmente.</translation>
+    </message>
+
+    <message>
+      <source>Falha ao resetar o token automaticamente.</source>
+      <translation>Falha ao resetar o token automaticamente.</translation>
+    </message>
+
+    <message>
+      <source>Token GitHub</source>
+      <translation>Token GitHub</translation>
+    </message>
+
+    <message>
+      <source>A configuração automática do token com setx está disponível apenas no Windows.</source>
+      <translation>A configuração automática do token com setx está disponível apenas no Windows.</translation>
+    </message>
+
+    <message>
+      <source>Token GitHub necessário</source>
+      <translation>Token GitHub necessário</translation>
+    </message>
+
+    <message>
+      <source>Cole seu token GitHub e clique em OK.
+O aplicativo executará:
+setx GITHUB_TOKEN "seu_token" /M
+setx GITHUB_TOKEN "seu_token"
+Pode ser solicitada confirmação de administrador (UAC).</source>
+      <translation>Cole seu token GitHub e clique em OK.
+O aplicativo executará:
+setx GITHUB_TOKEN "seu_token" /M
+setx GITHUB_TOKEN "seu_token"
+Pode ser solicitada confirmação de administrador (UAC).</translation>
+    </message>
+
+    <message>
+      <source>Token vazio. Informe um token válido para continuar.</source>
+      <translation>Token vazio. Informe um token válido para continuar.</translation>
+    </message>
+
+    <message>
+      <source>Token salvo com sucesso nas variáveis de usuário e de sistema.</source>
+      <translation>Token salvo com sucesso nas variáveis de usuário e de sistema.</translation>
+    </message>
+
+    <message>
+      <source>Token salvo parcialmente. A execução atual continuará usando o token informado.
+
+Detalhes:
+</source>
+      <translation>Token salvo parcialmente. A execução atual continuará usando o token informado.
+
+Detalhes:
+</translation>
+    </message>
+
+    <message>
+      <source>Não foi possível salvar o token com setx.
+
+Detalhes:
+</source>
+      <translation>Não foi possível salvar o token com setx.
+
+Detalhes:
+</translation>
+    </message>
+
+    <message>
+      <source>Falha ao configurar o token automaticamente.</source>
+      <translation>Falha ao configurar o token automaticamente.</translation>
+    </message>
+
+    <message>
+      <source>Defina GITHUB_TOKEN para executar unfollow.</source>
+      <translation>Defina GITHUB_TOKEN para executar unfollow.</translation>
+    </message>
+
+    <message>
+      <source>Execução interrompida pelo usuário.</source>
+      <translation>Execução interrompida pelo usuário.</translation>
+    </message>
+
+    <message>
+      <source>GitHub Follow Compare</source>
+      <translation>Comparar - Seguindo e Seguido</translation>
     </message>
 
   </context>

@@ -1,6 +1,6 @@
 CONTRATO DE LICENCIAMENTO COMERCIAL - Compare - Following and Follower
-Versao: 2026.2.26.0
-Data: 26 de fevereiro de 2026
+Versao: 2026.2.28.0
+Data: 28 de fevereiro de 2026
 
 Este Contrato de Licenciamento Comercial ("Contrato") e celebrado entre:
 
@@ -46,8 +46,8 @@ Este Contrato complementa os termos da Licenca de Uso de Usuario Final (EULA) e 
 6.1 O aplicativo armazena dados localmente no diretorio padrao:
     %LOCALAPPDATA%\FollowersFollowingGitHub
 6.2 Arquivos principais de persistencia local:
-    - .github_follow_compare_cache.json
-    - .github_follow_compare_state.json
+    - .github_follow_compare_antigo.json
+    - .github_follow_compare_atual.json
 6.3 O token de autenticacao do GitHub e lido da variavel de ambiente GITHUB_TOKEN e nao e gravado automaticamente nos arquivos de cache/estado pelo aplicativo.
 6.4 O aplicativo nao envia telemetria propria automaticamente. Comunicacoes de rede ocorrem quando o usuario executa consultas ou acoes no GitHub.
 6.5 O tratamento de dados pessoais, quando aplicavel, segue a Politica de Privacidade incluida no pacote.

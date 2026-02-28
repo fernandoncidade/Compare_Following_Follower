@@ -1,6 +1,6 @@
 COMMERCIAL LICENSE AGREEMENT - Compare - Following and Follower
-Version: 2026.2.26.0
-Date: February 26, 2026
+Version: 2026.2.28.0
+Date: February 28, 2026
 
 This Commercial License Agreement ("Agreement") is entered into between:
 
@@ -46,8 +46,8 @@ This Agreement supplements the End User License Agreement (EULA) and the Privacy
 6.1 The application stores data locally in the default directory:
     %LOCALAPPDATA%\FollowersFollowingGitHub
 6.2 Main local persistence files:
-    - .github_follow_compare_cache.json
-    - .github_follow_compare_state.json
+    - .github_follow_compare_antigo.json
+    - .github_follow_compare_atual.json
 6.3 The GitHub authentication token is read from the GITHUB_TOKEN environment variable and is not automatically written by the application into cache/state files.
 6.4 The application does not automatically send proprietary telemetry. Network communication occurs when the user performs GitHub queries or actions.
 6.5 Personal data processing, when applicable, follows the Privacy Policy included in the package.

@@ -36,15 +36,21 @@ from .src_28_print_cli_report import print_cli_report as _print_cli_report_impl
 from .src_29_format_exception import format_exception as _format_exception_impl
 from .src_30_run_gui import run_gui as _run_gui_impl
 from .src_31_qt_excepthook import _qt_excepthook as _qt_excepthook_impl
+from .src_32_persist_github_token import (
+    PersistTokenResult,
+    ResetTokenResult,
+    persist_github_token as _persist_github_token_impl,
+    reset_github_token as _reset_github_token_impl,
+)
 
 DEFAULT_USER = os.getenv("GITHUB_USER", "fernandoncidade")
 VERIFY_SSL = os.getenv("GITHUB_INSECURE", "").strip().lower() not in {"1", "true", "yes"}
 CONNECT_TIMEOUT = float(os.getenv("GITHUB_CONNECT_TIMEOUT", "10"))
 READ_TIMEOUT = float(os.getenv("GITHUB_READ_TIMEOUT", "30"))
 CACHE_TTL_SECONDS = int(os.getenv("FOLLOW_COMPARE_CACHE_TTL", "900"))
-APP_ICON_FILENAME_DARK = "GitHubFollowersPreenchidoClaro_256-256.ico"
+APP_ICON_FILENAME_DARK = "FollowingFollower_256-256.ico"
 APP_ICON_FILENAME_CLEAR = "GitHubFollowersVazado_256-256.ico"
-WINDOWS_APP_USER_MODEL_ID = "FollowersFollowingGitHub.GitHubFollowCompare"
+WINDOWS_APP_USER_MODEL_ID = "FollowingFollower.GitHubFollowCompare"
 
 
 class ConfigError(RuntimeError):
@@ -144,6 +150,12 @@ def _format_rate_limit_reset(reset_value: str | None) -> str | None:
 
 def get_token() -> str | None:
     return _get_token_impl()
+
+def persist_github_token(token: str) -> PersistTokenResult:
+    return _persist_github_token_impl(token)
+
+def reset_github_token() -> ResetTokenResult:
+    return _reset_github_token_impl()
 
 def build_headers() -> dict[str, str]:
     return _build_headers_impl()

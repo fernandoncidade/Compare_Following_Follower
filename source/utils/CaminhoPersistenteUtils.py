@@ -5,7 +5,7 @@ logger = LogManager.get_logger()
 
 @lru_cache(maxsize=1)
 def obter_caminho_persistente():
-    config_dir = os.path.join(os.environ.get('LOCALAPPDATA', os.path.expanduser('~')), 'FollowersFollowingGitHub')
+    config_dir = os.path.join(os.environ.get('LOCALAPPDATA', os.path.expanduser('~')), 'FollowingFollower')
     if not os.path.exists(config_dir):
         try:
             os.makedirs(config_dir)

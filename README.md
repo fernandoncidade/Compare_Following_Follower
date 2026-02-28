@@ -15,7 +15,7 @@
 
 # Compare - Following and Follower
 
-Versão: 2026.2.26.0
+Versão: 2026.2.28.0
 Autor: Fernando Nillsson Cidade
 
 ## Resumo
@@ -39,6 +39,23 @@ Uma ferramenta para transformar listas grandes de seguidores em decisões claras
 - Importação/exportação em JSON no formato do aplicativo.
 - Menu de idioma com alternância entre Português (Brasil) e Inglês (Estados Unidos).
 
+## Novidades e melhorias recentes
+- Configuração de token pela interface em **Configurações > Definir token GitHub** (`Ctrl+Shift+T`), com prompt para colar o token.
+- Persistência do token no Windows com `setx` em dois escopos:
+  - Usuário: `setx GITHUB_TOKEN "seu_token"`
+  - Sistema: `setx GITHUB_TOKEN "seu_token" /M` (com elevação/UAC quando necessário)
+- Reset completo do token em **Configurações > Resetar Token/Variáveis de Ambiente** (`Ctrl+Shift+R`):
+  - remove escopo de usuário, escopo de sistema, sessão atual e chaves de Registro relacionadas;
+  - remove arquivos locais de cache/estado;
+  - reinicia o aplicativo ao final da operação.
+- Exclusão do banco local em **Arquivo > Excluir** (`Ctrl+Shift+D`):
+  - lista apenas arquivos que realmente existem;
+  - informa quando nenhum arquivo existe;
+  - exibe mensagens claras de sucesso/erro.
+- Leitura de token mais robusta: quando `GITHUB_TOKEN` não está na sessão, o app tenta ler token persistido no Registro (usuário/sistema) e sincroniza a sessão atual.
+- Fluxo automático quando o token está ausente: em operações de atualização/unfollow, o app pode solicitar o token em janela de diálogo e continuar a execução atual com o valor informado.
+- Atalhos de menu e idioma refinados, incluindo atalho para submenu de idioma (`Alt+I`).
+
 ## Requisitos
 - Windows 10 ou superior.
 - Python 3.10+ para executar por código-fonte.
@@ -60,6 +77,9 @@ Uma ferramenta para transformar listas grandes de seguidores em decisões claras
    - `pip install -r requirements.txt`
 3. Definir token do GitHub:
    - PowerShell (sessão atual): `$env:GITHUB_TOKEN='seu_token'`
+   - PowerShell (persistente - usuário): `setx GITHUB_TOKEN "seu_token"`
+   - PowerShell (persistente - sistema): `setx GITHUB_TOKEN "seu_token" /M`
+   - Alternativa pela GUI: **Configurações > Definir token GitHub** (`Ctrl+Shift+T`)
 4. Executar:
    - GUI: `py main.py`
    - CLI: `py main.py --cli --user seu_usuario`
@@ -471,7 +491,7 @@ Consulte os arquivos de licença, avisos legais, EULA e política de privacidade
 
 # Compare - Following and Follower
 
-Version: 2026.2.26.0
+Version: 2026.2.28.0
 Author: Fernando Nillsson Cidade
 
 ## Summary
@@ -495,6 +515,23 @@ A tool to turn large follower lists into clear decisions without opening profile
 - JSON import/export using the app data format.
 - Language menu with Portuguese (Brazil) and English (United States).
 
+## Recent updates and improvements
+- Token setup via UI in **Settings > Set GitHub token** (`Ctrl+Shift+T`), with a dialog to paste the token.
+- Windows token persistence using `setx` in both scopes:
+  - User: `setx GITHUB_TOKEN "your_token"`
+  - System: `setx GITHUB_TOKEN "your_token" /M` (with UAC elevation when required)
+- Full token reset in **Settings > Reset Token/Environment Variables** (`Ctrl+Shift+R`):
+  - removes user scope, system scope, current session value, and related Registry entries;
+  - removes local cache/state files;
+  - restarts the application after the operation.
+- Local database deletion in **File > Delete** (`Ctrl+Shift+D`):
+  - lists only files that actually exist;
+  - informs when no database files exist;
+  - shows clear success/error feedback.
+- More robust token loading: when `GITHUB_TOKEN` is missing from the current session, the app attempts to read persisted token values from Registry (user/system) and syncs the current process environment.
+- Automatic missing-token flow: during refresh/unfollow operations, the app can request the token via dialog and continue the current run using the informed value.
+- Refined menu/language shortcuts, including the language submenu shortcut (`Alt+I`).
+
 ## Requirements
 - Windows 10 or later.
 - Python 3.10+ to run from source.
@@ -516,6 +553,9 @@ A tool to turn large follower lists into clear decisions without opening profile
    - `pip install -r requirements.txt`
 3. Set GitHub token:
    - PowerShell (current session): `$env:GITHUB_TOKEN='your_token'`
+   - PowerShell (persistent - user): `setx GITHUB_TOKEN "your_token"`
+   - PowerShell (persistent - system): `setx GITHUB_TOKEN "your_token" /M`
+   - GUI alternative: **Settings > Set GitHub token** (`Ctrl+Shift+T`)
 4. Run:
    - GUI: `py main.py`
    - CLI: `py main.py --cli --user your_username`

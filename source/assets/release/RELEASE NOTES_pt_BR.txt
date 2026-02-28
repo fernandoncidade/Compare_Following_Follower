@@ -1,11 +1,43 @@
 NOTAS DE LANÇAMENTO — Compare - Following and Follower
+Versão: 2026.2.28.0
+Data: 28 de fevereiro de 2026
+
+Resumo da versão
+Esta versão foca em facilitar a configuração de acesso ao GitHub e em dar mais controle sobre os dados locais do aplicativo, com fluxos guiados por confirmação.
+
+Novidades principais
+- Novo fluxo para definir o token do GitHub diretamente pela interface.
+- Salvamento do token em variáveis de usuário e de sistema no Windows (quando permitido).
+- Novo recurso para resetar token e variáveis de ambiente pelo menu Configurações.
+- No reset, o aplicativo também remove os dados locais relacionados e reinicia automaticamente.
+- Nova ação "Excluir" no menu Arquivo para apagar os arquivos do banco local com confirmação.
+- A janela de exclusão agora mostra somente os arquivos que realmente existem.
+- Quando não houver arquivos locais, o aplicativo informa isso claramente antes de qualquer ação.
+
+Melhorias de usabilidade
+- Novos atalhos para ações frequentes:
+  - Ctrl+Shift+D (Excluir banco local)
+  - Ctrl+Shift+T (Definir token GitHub)
+  - Ctrl+Shift+R (Resetar token/variáveis)
+- Mensagens de sucesso, aviso e erro mais diretas durante configuração, reset e exclusão.
+- Fluxo mais assistido quando o token estiver ausente: o app pode solicitar o token e continuar o processo atual.
+
+Melhorias de confiabilidade
+- O aplicativo aproveita melhor tokens já salvos no sistema, mesmo quando a sessão atual não tinha carregado a variável.
+- Em cenários com permissão parcial, o app informa detalhes do que foi concluído para evitar dúvidas.
+
+Compatibilidade e dados
+- O formato dos dados locais foi preservado.
+- Não há necessidade de migração manual para continuar usando a aplicação.
+
+_________________________________________________
+
+NOTAS DE LANÇAMENTO — Compare - Following and Follower
 Versão: 2026.2.26.0
 Data: 26 de fevereiro de 2026
 
 Resumo da versão
-Esta versão marca a consolidação do projeto Compare - Following and Follower como um app focado em
-comparação de relacionamentos no GitHub, com fluxo de uso mais completo, atalhos úteis
-e experiência de interface mais organizada.
+Esta versão marca a consolidação do projeto Compare - Following and Follower como um app focado em comparação de relacionamentos no GitHub, com fluxo de uso mais completo, atalhos úteis e experiência de interface mais organizada.
 
 Novidades principais
 - Novo menu Arquivo com ações:
@@ -59,6 +91,5 @@ Próximos passos sugeridos
 - Expandir indicadores para métricas históricas de crescimento de rede.
 
 Nota final
-Se esta versão fosse uma história, seria o capítulo em que o app deixa de ser
-"ferramenta útil" e vira "companheiro de auditoria social no GitHub".
+Se esta versão fosse uma história, seria o capítulo em que o app deixa de ser "ferramenta útil" e vira "companheiro de auditoria social no GitHub".
 Menos caos, mais contexto.

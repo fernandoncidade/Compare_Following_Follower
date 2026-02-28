@@ -1,5 +1,5 @@
 LICENCA DE USO DE USUARIO FINAL (EULA) - Compare - Following and Follower
-Versao 2026.2.26.0, 26 de fevereiro de 2026
+Versao 2026.2.28.0, 28 de fevereiro de 2026
 
 Copyright (C) 2026 Fernando Nillsson Cidade. Todos os direitos reservados.
 
@@ -39,8 +39,8 @@ d) tentar burlar limites tecnicos de APIs externas de forma indevida.
 7.1 Por padrao, os dados sao armazenados localmente em:
     %LOCALAPPDATA%\FollowersFollowingGitHub
 7.2 Arquivos de persistencia principais:
-    - .github_follow_compare_cache.json
-    - .github_follow_compare_state.json
+    - .github_follow_compare_antigo.json
+    - .github_follow_compare_atual.json
 7.3 O usuario pode limpar, importar e exportar dados JSON por funcionalidades da interface.
 
 8. PRIVACIDADE

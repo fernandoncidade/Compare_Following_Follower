@@ -32,10 +32,7 @@ class UnfollowWorker(QObject):
 
             try:
                 if not self._get_token_fn():
-                    raise self._config_error_cls(
-                        "Defina GITHUB_TOKEN para executar unfollow. "
-                        "PowerShell: $env:GITHUB_TOKEN='seu_token'."
-                    )
+                    raise self._config_error_cls("Defina GITHUB_TOKEN para executar unfollow.")
 
                 result = self._unfollow_result_cls(succeeded=[], failed={})
 

@@ -1,5 +1,5 @@
 END USER LICENSE AGREEMENT (EULA) - Compare - Following and Follower
-Version 2026.2.26.0, February 26, 2026
+Version 2026.2.28.0, February 28, 2026
 
 Copyright (C) 2026 Fernando Nillsson Cidade. All rights reserved.
 
@@ -39,8 +39,8 @@ d) attempt to improperly bypass technical limits of external APIs.
 7.1 By default, data is stored locally at:
     %LOCALAPPDATA%\FollowersFollowingGitHub
 7.2 Main persistence files:
-    - .github_follow_compare_cache.json
-    - .github_follow_compare_state.json
+    - .github_follow_compare_antigo.json
+    - .github_follow_compare_atual.json
 7.3 The user may clear, import, and export JSON data through interface features.
 
 8. PRIVACY

@@ -160,7 +160,7 @@ def exibir_sobre(app):
 
             texto_fixo = (
                 f"<span style='font-size:16px;font-weight:bold'>{app_title}</span><br/><br/>"
-                f"<span><b>{version_label}</b> 2026.2.26.0</span><br/><br/>"
+                f"<span><b>{version_label}</b> 2026.2.28.0</span><br/><br/>"
                 f"<span><b>{authors_label}</b> Fernando Nillsson Cidade</span><br/><br/>"
                 f"<span><b>{description_label}</b> {description_text}</span><br/>"
             )

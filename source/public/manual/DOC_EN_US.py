@@ -83,8 +83,31 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
         ),
         bullets=(
             "PowerShell (current session): $env:GITHUB_TOKEN='your_token'",
-            "PowerShell (persistent): setx GITHUB_TOKEN \"your_token\"",
+            "PowerShell (persistent - user): setx GITHUB_TOKEN \"your_token\"",
+            "PowerShell (persistent - system): setx GITHUB_TOKEN \"your_token\" /M",
             "After setx, open a new terminal/VS Code session so the variable is loaded.",
+        ),
+    ),
+    ManualSection(
+        id="token-via-ui",
+        title="Set token via UI (recommended)",
+        bullets=(
+            "Open Settings > Set GitHub token (Ctrl+Shift+T).",
+            "Paste the token and confirm with OK.",
+            "On Windows, the app attempts to save the token in User and System environment variables.",
+            "Saving into System variables may request administrator confirmation (UAC).",
+            "If only part of the save succeeds, the app shows details and continues the current execution using the informed token.",
+        ),
+    ),
+    ManualSection(
+        id="reset-token-variables",
+        title="Reset token and environment variables",
+        bullets=(
+            "Open Settings > Reset Token/Environment Variables (Ctrl+Shift+R).",
+            "The app asks for confirmation and shows local files that will also be removed.",
+            "The action removes user token, system token, current session value, and related Registry entries.",
+            "It also removes local files .github_follow_compare_antigo.json and .github_follow_compare_atual.json.",
+            "At the end, the app restarts automatically to apply changes.",
         ),
     ),
     ManualSection(
@@ -103,6 +126,7 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
         bullets=(
             "Enter the target account in the \"GitHub User\" field.",
             "Click \"▶️ Run\" to load/refresh data.",
+            "If token is missing and there is no usable cache, the app may prompt for token in a dialog.",
             "Read the summary counters at the top.",
             "Inspect each tab to analyze profiles by category.",
             "Use \"Force API refresh (ignore cache for 15 min)\" when you need immediate network data.",
@@ -174,10 +198,20 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
             "New (Ctrl+N): clears UI data and resets local cache/state files.",
             "Open (Ctrl+O): imports JSON in cache, state, or combined bundle format.",
             "Save (Ctrl+S): exports a JSON bundle with \"atual\" and \"antigo\" payloads.",
+            "Delete (Ctrl+Shift+D): shows existing local database files and asks confirmation before deletion.",
+            "If no local database files exist, the dialog explicitly informs that no files were found.",
             "Help (F1): shows available shortcuts.",
             "Close (Ctrl+Q): closes the application.",
-            "Language (Alt+I): switches between pt_BR and en_US in real time.",
-            "Manual (Ctrl+Shift+M) and About (Ctrl+Shift+A) are in the Options menu.",
+        ),
+    ),
+    ManualSection(
+        id="settings-language-options-menu",
+        title="Settings, Language, and Options menu",
+        bullets=(
+            "Set GitHub token (Ctrl+Shift+T): opens dialog to paste token and save environment variables.",
+            "Reset Token/Environment Variables (Ctrl+Shift+R): removes token, local files, and restarts the app.",
+            "Language (Alt+I): Settings submenu to switch between pt_BR and en_US in real time.",
+            "Manual (Ctrl+Shift+M) and About (Ctrl+Shift+A) are available in the Options menu.",
         ),
     ),
     ManualSection(
@@ -196,6 +230,7 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
         bullets=(
             ".github_follow_compare_atual.json: current snapshot with followers/following and calculated outputs.",
             ".github_follow_compare_antigo.json: previous snapshot used for historical comparison.",
+            "These files can be removed via File > Delete or during token reset in Settings.",
             "Paths can be overridden by environment variables:",
             "FOLLOW_COMPARE_CACHE_FILE (current) and FOLLOW_COMPARE_STATE_FILE (previous).",
             "Base persistent directory comes from source.utils.obter_caminho_persistente().",
@@ -219,6 +254,15 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
                 bullets=(
                     "Typical message: set GITHUB_TOKEN to use GraphQL without cache.",
                     "Set the environment variable and run again.",
+                    "You can also use Settings > Set GitHub token to configure it directly in the app.",
+                ),
+            ),
+            ManualDetails(
+                summary="Token saved partially (Windows)",
+                bullets=(
+                    "This can happen when user scope is saved but system scope needs administrator permission.",
+                    "Confirm UAC prompt when requested or run app/terminal with administrative privileges.",
+                    "Even with partial save, current execution can continue using the informed token.",
                 ),
             ),
             ManualDetails(
@@ -233,6 +277,14 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
                 bullets=(
                     "Check write permissions for the target directory.",
                     "Ensure file format matches expected cache/state/bundle structure.",
+                ),
+            ),
+            ManualDetails(
+                summary="Local database delete did not remove everything",
+                bullets=(
+                    "The Delete action removes files that exist at confirmation time.",
+                    "If no files exist, dialog informs there is no local database to delete.",
+                    "If only one file exists, only that file is listed/removed.",
                 ),
             ),
             ManualDetails(

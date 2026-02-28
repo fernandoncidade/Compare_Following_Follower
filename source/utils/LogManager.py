@@ -33,9 +33,9 @@ class LogManager:
     @classmethod
     def _configure_logging(cls):
         try:
-            log_dir = os.path.join(os.environ.get('LOCALAPPDATA', os.path.expanduser('~')), 'FollowersFollowingGitHub', 'logs')
+            log_dir = os.path.join(os.environ.get('LOCALAPPDATA', os.path.expanduser('~')), 'FollowingFollower', 'logs')
             os.makedirs(log_dir, exist_ok=True)
-            cls._log_file = os.path.join(log_dir, f'file_FollowersFollowingGitHub_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')
+            cls._log_file = os.path.join(log_dir, f'file_FollowingFollower_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')
 
             logging.basicConfig(
                 level=logging.ERROR,
@@ -46,7 +46,7 @@ class LogManager:
                 ]
             )
 
-            cls._logger = logging.getLogger('File_FollowersFollowingGitHub')
+            cls._logger = logging.getLogger('File_FollowingFollower')
 
             logging.getLogger('comtypes').setLevel(logging.CRITICAL)
             logging.getLogger('comtypes._comobject').setLevel(logging.CRITICAL)
@@ -61,9 +61,9 @@ class LogManager:
 
         except Exception as e:
             try:
-                user_data_dir = os.path.join(os.path.expanduser('~'), 'AppData', 'Local', 'FollowersFollowingGitHub', 'logs')
+                user_data_dir = os.path.join(os.path.expanduser('~'), 'AppData', 'Local', 'FollowingFollower', 'logs')
                 os.makedirs(user_data_dir, exist_ok=True)
-                cls._log_file = os.path.join(user_data_dir, f'file_FollowersFollowingGitHub_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')
+                cls._log_file = os.path.join(user_data_dir, f'file_FollowingFollower_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log')
 
                 logging.basicConfig(
                     level=logging.ERROR,
@@ -74,7 +74,7 @@ class LogManager:
                     ]
                 )
 
-                cls._logger = logging.getLogger('File_FollowersFollowingGitHub')
+                cls._logger = logging.getLogger('File_FollowingFollower')
 
                 logging.getLogger('comtypes').setLevel(logging.CRITICAL)
                 logging.getLogger('comtypes._comobject').setLevel(logging.CRITICAL)
@@ -91,7 +91,7 @@ class LogManager:
 
             except Exception:
                 logging.basicConfig(level=logging.CRITICAL)
-                cls._logger = logging.getLogger('File_FollowersFollowingGitHub')
+                cls._logger = logging.getLogger('File_FollowingFollower')
 
     @classmethod
     def debug(cls, message):
@@ -120,10 +120,10 @@ class LogManager:
                 return os.path.dirname(cls._log_file)
 
             base = os.environ.get('LOCALAPPDATA') or os.path.expanduser('~')
-            return os.path.join(base, 'FollowersFollowingGitHub', 'logs')
+            return os.path.join(base, 'FollowingFollower', 'logs')
 
         except Exception:
-            return os.path.join(os.path.expanduser('~'), 'AppData', 'Local', 'FollowersFollowingGitHub', 'logs')
+            return os.path.join(os.path.expanduser('~'), 'AppData', 'Local', 'FollowingFollower', 'logs')
 
     @classmethod
     def _cleanup_logs(cls) -> None:
@@ -135,7 +135,7 @@ class LogManager:
             file_logs = [
                 os.path.join(log_dir, name)
                 for name in os.listdir(log_dir)
-                if name.endswith(".log") and name.startswith("file_FollowersFollowingGitHub_")
+                if name.endswith(".log") and name.startswith("file_FollowingFollower_")
             ]
 
             if len(file_logs) <= 10:
