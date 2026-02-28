@@ -24,6 +24,29 @@ class ResetTokenResult:
     user_scope_message: str
     system_scope_message: str
 
+def _hidden_subprocess_kwargs() -> dict[str, object]:
+    if os.name != "nt":
+        return {}
+
+    kwargs: dict[str, object] = {}
+
+    try:
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = subprocess.SW_HIDE
+        kwargs["startupinfo"] = startupinfo
+
+    except Exception:
+        pass
+
+    try:
+        kwargs["creationflags"] = int(getattr(subprocess, "CREATE_NO_WINDOW"))
+
+    except Exception:
+        pass
+
+    return kwargs
+
 def _normalize_token(raw_token: str) -> str:
     token = (raw_token or "").strip().strip('"').strip("'")
 
@@ -108,7 +131,13 @@ def _run_setx(token: str, system_scope: bool) -> tuple[bool, str]:
         args.append("/M")
 
     try:
-        completed = subprocess.run(args, capture_output=True, text=True, check=False)
+        completed = subprocess.run(
+            args,
+            capture_output=True,
+            text=True,
+            check=False,
+            **_hidden_subprocess_kwargs(),
+        )
         raw_output = _collect_process_output(completed)
 
         return completed.returncode == 0, raw_output
@@ -125,7 +154,7 @@ def _run_setx_system_with_uac(token: str) -> tuple[bool, str]:
         f"$token='{escaped_token}'; "
         "$process = Start-Process -FilePath 'setx.exe' "
         "-ArgumentList @('GITHUB_TOKEN', $token, '/M') "
-        "-Verb RunAs -PassThru -Wait; "
+        "-Verb RunAs -WindowStyle Hidden -PassThru -Wait; "
         "exit $process.ExitCode"
     )
 
@@ -136,12 +165,15 @@ def _run_setx_system_with_uac(token: str) -> tuple[bool, str]:
                 "-NoProfile",
                 "-ExecutionPolicy",
                 "Bypass",
+                "-WindowStyle",
+                "Hidden",
                 "-Command",
                 powershell_script,
             ],
             capture_output=True,
             text=True,
             check=False,
+            **_hidden_subprocess_kwargs(),
         )
 
         output_message = _collect_process_output(completed)
@@ -170,12 +202,15 @@ def _run_powershell_command(script: str) -> tuple[bool, str]:
                 "-NoProfile",
                 "-ExecutionPolicy",
                 "Bypass",
+                "-WindowStyle",
+                "Hidden",
                 "-Command",
                 script,
             ],
             capture_output=True,
             text=True,
             check=False,
+            **_hidden_subprocess_kwargs(),
         )
         output_message = _collect_process_output(completed)
         return completed.returncode == 0, output_message
@@ -195,7 +230,7 @@ def _run_elevated_powershell_script(script: str) -> tuple[bool, str]:
         f"$encoded='{encoded_script}'; "
         "$process = Start-Process -FilePath 'powershell.exe' "
         "-ArgumentList @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', $encoded) "
-        "-Verb RunAs -PassThru -Wait; "
+        "-Verb RunAs -WindowStyle Hidden -PassThru -Wait; "
         "exit $process.ExitCode"
     )
     return _run_powershell_command(wrapper_script)

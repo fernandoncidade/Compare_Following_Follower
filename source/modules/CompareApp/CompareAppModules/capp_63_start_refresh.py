@@ -15,6 +15,13 @@ def _start_refresh(self, force_network_refresh: bool) -> None:
             QMessageBox.critical(self, self._tr("Entrada inválida"), self._tr("Informe um usuário GitHub."))
             return
 
+        try:
+            from source.modules import source as core
+            core.save_last_user(user)
+
+        except Exception as save_exc:
+            logger.error(f"Erro ao persistir último usuário '{user}': {save_exc}")
+
         if not self._ensure_token_available_for_refresh(user):
             return
 

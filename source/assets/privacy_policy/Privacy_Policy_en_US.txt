@@ -1,6 +1,6 @@
 PRIVACY POLICY - Compare - Following and Follower
-Last updated: February 28, 2026
-Version: 2026.2.28.0
+Last updated: February 29, 2026
+Version: 2026.2.29.0
 
 SUMMARY
 This Policy explains how Compare - Following and Follower handles data. The application is designed for local persistence and, by default, does not automatically send proprietary telemetry.

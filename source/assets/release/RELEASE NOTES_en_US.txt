@@ -1,3 +1,28 @@
+RELEASE NOTES — Compare - Following and Follower
+Version: 2026.2.29.0
+Date: February 29, 2026
+
+Version summary
+This release improves daily-use stability, makes the token flow more discreet, and makes user input handling smarter.
+
+Main improvements
+- Automatic restart after reset has been strengthened to work more reliably.
+- Token setup and reset now happen silently, without opening command windows.
+- The user field now starts empty when there is no saved user.
+- The application now remembers the last entered user and loads that value on next launches.
+- When a new user is entered, it automatically replaces the previously saved user.
+- When running "Reset Token/Environment Variables," the saved user is also deleted and the user field is cleared.
+
+Experience improvements
+- The reset is now more complete, also removing information used for auto-fill.
+- Result messages are now clearer about what was removed.
+
+Compatibility and data
+- No manual migration is required.
+- Improvements are applied automatically after the update.
+
+_________________________________________________
+
 RELEASE NOTES - Compare - Following and Follower
 Version: 2026.2.28.0
 Date: February 28, 2026

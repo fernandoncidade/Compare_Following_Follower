@@ -15,7 +15,7 @@
 
 # Compare - Following and Follower
 
-Versão: 2026.2.28.0
+Versão: 2026.2.29.0
 Autor: Fernando Nillsson Cidade
 
 ## Resumo
@@ -491,7 +491,7 @@ Consulte os arquivos de licença, avisos legais, EULA e política de privacidade
 
 # Compare - Following and Follower
 
-Version: 2026.2.28.0
+Version: 2026.2.29.0
 Author: Fernando Nillsson Cidade
 
 ## Summary

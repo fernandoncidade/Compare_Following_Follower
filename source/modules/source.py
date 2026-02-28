@@ -42,8 +42,10 @@ from .src_32_persist_github_token import (
     persist_github_token as _persist_github_token_impl,
     reset_github_token as _reset_github_token_impl,
 )
+from .src_33_load_last_user import load_last_user as _load_last_user_impl
+from .src_34_save_last_user import save_last_user as _save_last_user_impl
 
-DEFAULT_USER = os.getenv("GITHUB_USER", "fernandoncidade")
+DEFAULT_USER = ""
 VERIFY_SSL = os.getenv("GITHUB_INSECURE", "").strip().lower() not in {"1", "true", "yes"}
 CONNECT_TIMEOUT = float(os.getenv("GITHUB_CONNECT_TIMEOUT", "10"))
 READ_TIMEOUT = float(os.getenv("GITHUB_READ_TIMEOUT", "30"))
@@ -69,6 +71,7 @@ class UnfollowResult:
 
 CACHE_FILE = _resolve_persistent_file_path_impl("FOLLOW_COMPARE_CACHE_FILE", ".github_follow_compare_atual.json")
 NON_FOLLOWERS_STATE_FILE = _resolve_persistent_file_path_impl("FOLLOW_COMPARE_STATE_FILE", ".github_follow_compare_antigo.json")
+LAST_USER_FILE = _resolve_persistent_file_path_impl("FOLLOW_COMPARE_LAST_USER_FILE", ".github_follow_compare_last_user.json")
 GRAPHQL_URL = "https://api.github.com/graphql"
 REST_API_URL = "https://api.github.com"
 
@@ -156,6 +159,12 @@ def persist_github_token(token: str) -> PersistTokenResult:
 
 def reset_github_token() -> ResetTokenResult:
     return _reset_github_token_impl()
+
+def load_last_user() -> str:
+    return _load_last_user_impl()
+
+def save_last_user(user: str) -> None:
+    return _save_last_user_impl(user)
 
 def build_headers() -> dict[str, str]:
     return _build_headers_impl()

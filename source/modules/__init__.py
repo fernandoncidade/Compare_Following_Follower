@@ -5,8 +5,10 @@ from .source import (
     build_session,
     format_exception,
     get_compare_data,
+    load_last_user,
     print_cli_report,
     run_gui,
+    save_last_user,
 )
 
 __all__ = [
@@ -16,6 +18,8 @@ __all__ = [
     "build_session",
     "format_exception",
     "get_compare_data",
+    "load_last_user",
     "print_cli_report",
     "run_gui",
+    "save_last_user",
 ]

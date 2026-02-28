@@ -1,4 +1,29 @@
 NOTAS DE LANÇAMENTO — Compare - Following and Follower
+Versão: 2026.2.29.0
+Data: 29 de fevereiro de 2026
+
+Resumo da versão
+Esta versão melhora a estabilidade do uso diário, deixa o fluxo de token mais discreto e torna o preenchimento de usuário mais inteligente.
+
+Melhorias principais
+- O reinício automático após o reset foi reforçado para funcionar com mais confiabilidade.
+- A definição e o reset do token agora acontecem de forma silenciosa, sem abrir janelas de comando.
+- O campo de usuário passa a iniciar vazio quando não existe usuário salvo.
+- O aplicativo agora lembra o último usuário informado e carrega esse valor nas próximas aberturas.
+- Quando um novo usuário é informado, ele substitui automaticamente o usuário salvo anteriormente.
+- Ao executar "Resetar Token/Variáveis de Ambiente", o usuário salvo também é apagado e o campo de usuário é limpo.
+
+Melhorias de experiência
+- O reset ficou mais completo, removendo também informações usadas no preenchimento automático.
+- As mensagens de resultado ficaram mais claras sobre o que foi limpo.
+
+Compatibilidade e dados
+- Não é necessária migração manual.
+- As melhorias são aplicadas automaticamente após a atualização.
+
+_________________________________________________
+
+NOTAS DE LANÇAMENTO — Compare - Following and Follower
 Versão: 2026.2.28.0
 Data: 28 de fevereiro de 2026
 

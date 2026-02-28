@@ -1,5 +1,6 @@
 from __future__ import annotations
 import os
+from pathlib import Path
 from PySide6.QtWidgets import QMessageBox
 from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()
@@ -10,6 +11,13 @@ def _on_reset_github_token_selected(self) -> None:
             return
 
         state_file, cache_file = self._resolve_database_file_paths()
+        try:
+            from source.modules import source as core
+            last_user_file = Path(core.LAST_USER_FILE)
+
+        except Exception:
+            last_user_file = Path.home() / "AppData" / "Local" / "FollowingFollower" / ".github_follow_compare_last_user.json"
+
         title = self._resolve_label("Resetar token GitHub", "Reset GitHub token")
         answer = QMessageBox.question(
             self,
@@ -23,7 +31,8 @@ def _on_reset_github_token_selected(self) -> None:
                 "5) Remover do Registro - Escopo Sistema.\n\n"
                 "Também irá excluir os arquivos abaixo e reiniciar o aplicativo:\n"
                 "{state_file}\n"
-                "{cache_file}\n\n"
+                "{cache_file}\n"
+                "{last_user_file}\n\n"
                 "Deseja continuar?",
                 "This action will:\n"
                 "1) Remove the current user's persistent variable;\n"
@@ -33,11 +42,13 @@ def _on_reset_github_token_selected(self) -> None:
                 "5) Remove it from the Registry - System scope.\n\n"
                 "It will also delete the files below and restart the application:\n"
                 "{state_file}\n"
-                "{cache_file}\n\n"
+                "{cache_file}\n"
+                "{last_user_file}\n\n"
                 "Do you want to continue?",
             ).format(
                 state_file=str(state_file),
                 cache_file=str(cache_file),
+                last_user_file=str(last_user_file),
             ),
             QMessageBox.Yes | QMessageBox.No,
             QMessageBox.No,
@@ -52,7 +63,8 @@ def _on_reset_github_token_selected(self) -> None:
 
         state_ok, state_msg = self._remove_file_for_token_reset(state_file)
         cache_ok, cache_msg = self._remove_file_for_token_reset(cache_file)
-        files_ok = state_ok and cache_ok
+        last_user_ok, last_user_msg = self._remove_file_for_token_reset(last_user_file)
+        files_ok = state_ok and cache_ok and last_user_ok
 
         user_ok = bool(getattr(result, "user_scope_removed", False))
         system_ok = bool(getattr(result, "system_scope_removed", False))
@@ -65,11 +77,18 @@ def _on_reset_github_token_selected(self) -> None:
             f"{self._resolve_label('removida', 'removed') if token_process_ok else self._resolve_label('não removida', 'not removed')}",
             f"{str(state_file)}: {state_msg}",
             f"{str(cache_file)}: {cache_msg}",
+            f"{str(last_user_file)}: {last_user_msg}",
         ]
         details = "\n".join(details_lines)
 
         full_success = user_ok and system_ok and token_process_ok and files_ok
-        partial_success = any([user_ok, system_ok, token_process_ok, state_ok, cache_ok])
+        partial_success = any([user_ok, system_ok, token_process_ok, state_ok, cache_ok, last_user_ok])
+
+        try:
+            self.user_input.clear()
+
+        except Exception as clear_exc:
+            logger.error(f"Erro ao limpar campo de usuário após reset: {clear_exc}")
 
         if full_success:
             QMessageBox.information(

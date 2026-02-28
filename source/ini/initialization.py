@@ -1,5 +1,5 @@
 import sys
-from source.modules import ConfigError, DEFAULT_USER, VERIFY_SSL, build_session, get_compare_data, print_cli_report, run_gui
+from source.modules import ConfigError, DEFAULT_USER, VERIFY_SSL, build_session, get_compare_data, load_last_user, print_cli_report, run_gui
 from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()
 
@@ -65,7 +65,13 @@ def main(argv: list[str] | None = None) -> int:
             print("Aviso: SSL desativado por GITHUB_INSECURE. Use apenas para teste.", file=sys.stderr)
 
         if cli_mode:
+            if not user.strip():
+                raise ConfigError("No modo CLI, informe um usuário com --user.")
+
             return run_cli(user=user, force_refresh=force_refresh)
+
+        if not user.strip():
+            user = load_last_user()
 
         try:
             return run_gui(initial_user=user, force_refresh=force_refresh)

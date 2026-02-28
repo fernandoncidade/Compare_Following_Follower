@@ -70,10 +70,12 @@ def _on_open_selected(self) -> None:
         if cache_payload is not None:
             persisted_ok = self._write_json_atomic(core.CACHE_FILE, cache_payload) and persisted_ok
             self.user_input.setText(cache_payload["user"])
+            core.save_last_user(cache_payload["user"])
             self._on_fetch_success(self._create_compare_data_from_cache_payload(cache_payload))
 
         elif state_payload is not None:
             self.user_input.setText(state_payload["user"])
+            core.save_last_user(state_payload["user"])
             self._apply_state_payload_only(state_payload)
 
         if persisted_ok:
