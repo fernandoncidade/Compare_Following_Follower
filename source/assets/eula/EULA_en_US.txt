@@ -1,0 +1,87 @@
+END USER LICENSE AGREEMENT (EULA) - Compare - Following and Follower
+Version 2026.2.26.0, February 26, 2026
+
+Copyright (C) 2026 Fernando Nillsson Cidade. All rights reserved.
+
+By installing, copying, or using the software, you agree to the terms of this License. If you do not agree, do not install or use the software.
+
+1. DEFINITIONS
+"Licensor": Fernando Nillsson Cidade.
+"Software": Compare - Following and Follower (also identified as GitHub Follow Compare), including executable, source code, embedded resources, and documentation.
+"User" or "Licensee": natural or legal person who installs or uses the software.
+
+2. LICENSE GRANT
+2.1 A limited, non-exclusive, non-transferable, revocable license is granted for personal, educational, or professional use of the software.
+2.2 Commercial use may require an additional specific agreement (CLC), when applicable.
+
+3. SCOPE OF USE
+3.1 The software may be distributed as source code or packaged executable.
+3.2 The user may use the software to compare followers/following, analyze changes across checks, and perform actions allowed by the user's own GitHub account.
+
+4. RESTRICTIONS
+You may not:
+a) remove or alter copyright, trademark, or license notices;
+b) redistribute the executable as your own product without authorization;
+c) use the software for illegal activities or in violation of service terms;
+d) attempt to improperly bypass technical limits of external APIs.
+
+5. COMMUNICATION WITH EXTERNAL APIS
+5.1 When requested by the user, the software may perform HTTPS calls to GitHub APIs, including GraphQL and REST endpoints.
+5.2 Unfollow actions, when used, are executed on the authenticated user's own account.
+5.3 GitHub API usage is subject to GitHub terms and policies, including rate limits and security rules.
+
+6. TOKEN AND CREDENTIALS
+6.1 The authentication token is obtained from the GITHUB_TOKEN environment variable.
+6.2 The software does not automatically write the token value into application cache/state files.
+6.3 The user is responsible for protecting credentials and avoiding improper sharing.
+
+7. LOCAL DATA STORAGE
+7.1 By default, data is stored locally at:
+    %LOCALAPPDATA%\FollowersFollowingGitHub
+7.2 Main persistence files:
+    - .github_follow_compare_cache.json
+    - .github_follow_compare_state.json
+7.3 The user may clear, import, and export JSON data through interface features.
+
+8. PRIVACY
+8.1 The software does not automatically send proprietary telemetry.
+8.2 Network traffic occurs when the user requests operations involving the GitHub account.
+8.3 Data handling follows the Privacy Policy included in the package.
+
+9. THIRD-PARTY COMPONENTS
+9.1 The software uses third-party components (for example PySide6, requests, and transitive dependencies), each subject to its own license.
+9.2 Third-party notices are documented in assets/notices and assets/licenses.
+
+10. UPDATES AND SUPPORT
+10.1 The Licensor may provide updates, fixes, and new versions with no minimum periodicity obligation.
+10.2 Technical support may be offered through channels informed by the project.
+
+11. WARRANTY AND LIMITATION OF LIABILITY
+11.1 The software is provided "as is" without guarantees of specific outcomes.
+11.2 To the maximum extent permitted by law, the Licensor is not liable for indirect damages, lost profits, third-party service downtime, or losses from use/inability to use.
+11.3 When applicable, total Licensor liability is limited to the amount paid for the software in the contractual period or BRL 5.00, whichever is greater.
+
+12. TERMINATION
+12.1 This License may be terminated upon breach of its terms.
+12.2 Upon termination, the user must cease usage and remove unauthorized copies, as applicable.
+
+13. INTELLECTUAL PROPERTY AND TRADEMARKS
+13.1 Compare - Following and Follower and GitHub Follow Compare are identifiers of the Licensor's project.
+13.2 "GitHub" and related marks belong to their respective owners.
+13.3 This project is not affiliated with, sponsored by, or endorsed by GitHub, Inc.
+
+14. GOVERNING LAW AND JURISDICTION
+14.1 This License is governed by the laws of the Federative Republic of Brazil.
+14.2 The courts of Sao Jose dos Pinhais, State of Parana, Brazil, are elected for dispute resolution, unless mandatory law provides otherwise.
+
+15. ENTIRE AGREEMENT
+15.1 This EULA, the Privacy Policy, and third-party notices/licenses constitute the entire usage agreement.
+
+Contact:
+- Author: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+Internal references:
+- Privacy Policy: assets/privacy_policy/Privacy_Policy_en_US.txt
+- Third-party notices: assets/notices/NOTICE_en_US.txt
+- Commercial agreement: assets/clc/CLC_en_US.txt

@@ -1,0 +1,58 @@
+AVISO DE LICENCAS E ATRIBUICOES DE TERCEIROS - Compare - Following and Follower
+Versao 2026.2.26.0, 26 de fevereiro de 2026
+
+1. OBJETIVO
+Este documento descreve componentes de terceiros relevantes para distribuicao e uso do Compare - Following and Follower, bem como referencias para os textos completos de licenca.
+
+2. COMPONENTES PRINCIPAIS
+2.1 PySide6 (Qt for Python)
+- Finalidade: interface grafica (Qt Widgets), traducoes e recursos de UI.
+- Licenciamento: LGPL (conforme distribuicao do componente).
+- Referencias: https://doc.qt.io/qtforpython/ e https://github.com/qt/pyside
+
+2.2 requests
+- Finalidade: comunicacao HTTP/HTTPS com a API do GitHub.
+- Licenciamento: Apache License 2.0.
+- Referencia: https://requests.readthedocs.io/
+
+2.3 Python Runtime
+- Finalidade: execucao da aplicacao e bibliotecas padrao.
+- Licenciamento: Python Software Foundation License.
+- Referencia: https://www.python.org/
+
+3. DEPENDENCIAS TRANSITIVAS
+Dependencias transitivas podem incluir componentes sob licencas MIT, BSD, ISC e outras compativeis. Os termos aplicaveis devem ser preservados na distribuicao.
+
+4. TERMOS DE API EXTERNA
+O software consome a API do GitHub para funcionalidades de comparacao e unfollow. O uso dessas APIs deve respeitar os termos, politicas e limites definidos pelo GitHub.
+
+5. ONDE ENCONTRAR LICENCAS COMPLETAS
+Os textos de licenca incluidos no pacote estao em assets/licenses, incluindo:
+- Apache License Version 2.0.txt
+- BSD License Clause-2.txt
+- BSD License Clause-3.txt
+- GNU LESSER GENERAL PUBLIC LICENSE Version 2.1.txt
+- GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt
+- ISC LICENSE.txt
+- MIT License.txt
+- PYTHON SOFTWARE FOUNDATION LICENSE.txt
+
+6. OBRIGACOES DE REDISTRIBUICAO
+6.1 Ao redistribuir o executavel, mantenha os avisos de copyright, licenca e atribuicao.
+6.2 Para componentes sob LGPL, preserve os requisitos aplicaveis (incluindo avisos e documentacao de conformidade).
+6.3 Nao remova nem altere textos legais incluidos no pacote.
+
+7. DADOS E PRIVACIDADE
+- O aplicativo opera com persistencia local em %LOCALAPPDATA%\FollowersFollowingGitHub.
+- Arquivos padrao: .github_follow_compare_cache.json e .github_follow_compare_state.json.
+- O aplicativo nao envia telemetria propria automaticamente.
+
+8. CONTATO
+Para duvidas de licenciamento, conformidade e atribuicoes:
+- Autor / Responsavel: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+Referencias internas:
+- EULA: assets/eula/EULA_pt_BR.txt
+- Politica de Privacidade: assets/privacy_policy/Privacy_Policy_pt_BR.txt
+- Aviso de copyright e marca: assets/copyright/AVISO DE COPYRIGHT E MARCA REGISTRA_pt_BR.txt

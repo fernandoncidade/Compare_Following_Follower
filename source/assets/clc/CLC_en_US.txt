@@ -1,0 +1,97 @@
+COMMERCIAL LICENSE AGREEMENT - Compare - Following and Follower
+Version: 2026.2.26.0
+Date: February 26, 2026
+
+This Commercial License Agreement ("Agreement") is entered into between:
+
+LICENSOR: Fernando Nillsson Cidade, hereinafter "LICENSOR".
+LICENSEE: the natural or legal person that acquires a commercial license for the Compare - Following and Follower software, hereinafter "LICENSEE".
+
+PREAMBLE
+This Agreement supplements the End User License Agreement (EULA) and the Privacy Policy included with the application package. Its purpose is to define commercial usage terms, support, updates, and liabilities related to Compare - Following and Follower (also identified in the interface as GitHub Follow Compare), an application for comparing followers/following relationships on GitHub, with local cache support, JSON import/export, and assisted unfollow actions.
+
+1. OBJECT
+1.1 The LICENSOR grants the LICENSEE the right to use the Compare - Following and Follower software according to the contracted licensing modality.
+1.2 Unless expressly stated in a specific contract, the license covers use of the executable and documentation and does not transfer intellectual property ownership.
+
+2. LICENSING MODALITIES
+2.1 Individual License
+ a) Use by a single user.
+ b) Installation on up to 2 (two) devices owned by the LICENSEE.
+ c) Email support during the contracted term.
+
+2.2 Team License
+ a) Internal team use within the same organization, up to the contracted limit.
+ b) Priority email support.
+ c) Corrective updates during the contracted term.
+
+2.3 Enterprise License
+ a) Usage terms, installation quantity, and SLA defined in a specific commercial proposal.
+ b) May include training, customization, and extended support when contracted.
+
+3. PAYMENT AND BILLING
+3.1 Prices, terms, and payment methods are defined in the commercial proposal accepted by the parties.
+3.2 Non-payment may suspend support and commercial updates until regularization.
+
+4. TERM AND RENEWAL
+4.1 The Agreement term is the one defined by the contracted modality.
+4.2 Renewal of support and updates depends on a new contract. Continued use of an already licensed version remains allowed, except in case of default or contractual breach.
+
+5. SUPPORT AND UPDATES
+5.1 Support covers installation guidance, documented feature usage, and handling of reproducible defects.
+5.2 The LICENSOR may provide corrective and evolutionary updates according to release policy and technical availability.
+5.3 Changes in external APIs (for example GitHub API) may require technical adjustments and may temporarily impact features until a compatible update is provided.
+
+6. DATA, PRIVACY, AND SECURITY
+6.1 The application stores data locally in the default directory:
+    %LOCALAPPDATA%\FollowersFollowingGitHub
+6.2 Main local persistence files:
+    - .github_follow_compare_cache.json
+    - .github_follow_compare_state.json
+6.3 The GitHub authentication token is read from the GITHUB_TOKEN environment variable and is not automatically written by the application into cache/state files.
+6.4 The application does not automatically send proprietary telemetry. Network communication occurs when the user performs GitHub queries or actions.
+6.5 Personal data processing, when applicable, follows the Privacy Policy included in the package.
+
+7. THIRD-PARTY COMPONENTS AND EXTERNAL APIS
+7.1 The project uses third-party components (for example PySide6, requests, and transitive components), subject to their respective licenses.
+7.2 Use of GitHub APIs is governed by GitHub terms, including rate limits, usage rules, and security policies.
+7.3 Third-party license texts and notices are included in assets/licenses, assets/notices, and related files.
+
+8. LIMITATION OF LIABILITY
+8.1 The software is provided "as is".
+8.2 To the maximum extent permitted by law, the LICENSOR is not liable for indirect damages, lost profits, lost opportunities, or downtime resulting from third-party service changes.
+8.3 If liability is admitted, total liability is limited to the amount effectively paid for the license in the contracted period or BRL 5.00, whichever is greater, unless mandatory law provides otherwise.
+
+9. LICENSEE OBLIGATIONS
+9.1 Use the software in compliance with applicable law, this Agreement, the EULA, and the terms of used APIs.
+9.2 Do not remove copyright, trademark, or license notices.
+9.3 Do not resell, sublicense, or redistribute the executable without the LICENSOR's express authorization.
+
+10. TERMINATION
+10.1 This Agreement may be terminated for contractual breach, default, or mutual agreement.
+10.2 In case of termination due to LICENSEE fault, paid amounts are non-refundable unless otherwise agreed in writing.
+
+11. INTELLECTUAL PROPERTY AND TRADEMARKS
+11.1 Compare - Following and Follower, GitHub Follow Compare, source code, texts, and visual assets are owned by the LICENSOR, except for third-party components.
+11.2 "GitHub" and related marks belong to their respective owners. This project is not affiliated with, sponsored by, or endorsed by GitHub, Inc.
+
+12. GOVERNING LAW AND JURISDICTION
+12.1 This Agreement is governed by the laws of the Federative Republic of Brazil.
+12.2 The courts of Sao Jose dos Pinhais, State of Parana, Brazil, are elected for dispute resolution, unless mandatory law requires otherwise.
+
+13. GENERAL PROVISIONS
+13.1 This Agreement, together with the EULA, Privacy Policy, and third-party notices, forms the set of terms applicable to commercial software use.
+13.2 Any amendment to this Agreement must be formalized in writing.
+13.3 Invalidity of one clause does not invalidate the remaining clauses.
+
+Commercial, support, and privacy contact:
+- Author / LICENSOR: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+- Repository and technical support: consult project channels.
+
+Signatures:
+_____________________________________
+Fernando Nillsson Cidade - LICENSOR
+
+_____________________________________
+LICENSEE (name and signature)

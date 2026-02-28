@@ -1,0 +1,74 @@
+POLITICA DE PRIVACIDADE - Compare - Following and Follower
+Ultima atualizacao: 26 de fevereiro de 2026
+Versao: 2026.2.26.0
+
+RESUMO
+Esta Politica explica como o Compare - Following and Follower trata dados. O aplicativo foi projetado para operar com persistencia local e, por padrao, nao envia telemetria propria automaticamente.
+
+1. ESCOPO E PRINCIPIOS
+- Controle do usuario: dados ficam sob controle do proprio usuario no dispositivo local.
+- Minimizacao: apenas dados necessarios para as funcionalidades de comparacao sao processados.
+- Transparencia: o usuario pode limpar, importar e exportar dados JSON pela interface.
+
+2. DADOS PROCESSADOS
+2.1 Dados informados pelo usuario
+- Nome de usuario GitHub informado na interface.
+- Arquivos JSON selecionados para importacao manual.
+
+2.2 Dados retornados por APIs externas (quando acionado pelo usuario)
+- Listas de seguidores (followers) e seguidos (following).
+- Metadados de rate limit e status de requisicoes.
+- Resultado de acoes de unfollow solicitadas explicitamente.
+
+2.3 Dados tecnicos locais
+- Cache e estado local em arquivos JSON.
+- Logs tecnicos locais para diagnostico.
+- Configuracoes de interface e preferencia de idioma.
+
+3. LOCAL DE ARMAZENAMENTO
+Diretorio padrao:
+%LOCALAPPDATA%\FollowersFollowingGitHub
+
+Arquivos principais:
+- .github_follow_compare_cache.json
+- .github_follow_compare_state.json
+
+4. TOKEN E CREDENCIAIS
+- O token GitHub e lido da variavel de ambiente GITHUB_TOKEN.
+- O aplicativo nao salva automaticamente o valor do token nos arquivos de cache/estado.
+- A protecao e rotacao do token sao responsabilidade do usuario.
+
+5. COMUNICACAO DE REDE E COMPARTILHAMENTO
+- O aplicativo faz chamadas HTTPS para APIs do GitHub apenas quando o usuario executa operacoes.
+- Nao ha envio automatico de dados para provedores de analytics do proprio aplicativo.
+- Fora a comunicacao necessaria com o GitHub para funcionalidades solicitadas, nao ha compartilhamento automatico com terceiros.
+
+6. IMPORTACAO E EXPORTACAO
+- O usuario pode abrir arquivos JSON compativeis e exportar um pacote JSON contendo cache e estado.
+- O local de leitura/gravao e escolhido pelo proprio usuario.
+
+7. RETENCAO E EXCLUSAO
+- Os dados permanecem localmente ate exclusao manual pelo usuario.
+- A funcionalidade "Novo" pode limpar dados exibidos e resetar os arquivos locais padrao.
+
+8. SEGURANCA
+- A protecao fisica/logica do dispositivo e do sistema operacional influencia diretamente a seguranca dos dados.
+- Recomenda-se backup regular dos arquivos JSON e logs importantes.
+- O aplicativo utiliza HTTPS para comunicacoes com a API do GitHub.
+
+9. DIREITOS DO TITULAR (LGPD)
+Quando aplicavel, o usuario pode exercer direitos de acesso, correcao, exclusao e portabilidade por meio de controle dos arquivos locais e contato com o responsavel do projeto.
+
+10. CRIANCAS E ADOLESCENTES
+O aplicativo nao e direcionado especificamente a criancas e nao realiza coleta intencional de dados de menores.
+
+11. ALTERACOES NESTA POLITICA
+Esta Politica pode ser atualizada para refletir mudancas de funcionalidade, requisitos legais ou evolucoes tecnicas. A data e versao serao atualizadas no cabecalho.
+
+12. CONTATO
+Responsavel: Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+
+Referencias internas:
+- EULA: assets/eula/EULA_pt_BR.txt
+- Avisos de terceiros: assets/notices/NOTICE_pt_BR.txt

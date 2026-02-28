@@ -1,0 +1,50 @@
+Projeto: Compare - Following and Follower
+Versão: 2026.2.26.0
+Autor: Fernando Nillsson Cidade
+
+O que é este projeto?
+Compare - Following and Follower é um aplicativo desktop para comparar, de forma prática, quem você segue e quem te segue no GitHub. Uma ferramenta para transformar listas grandes de seguidores em decisões claras, sem precisar abrir perfil por perfil.
+
+Descrição detalhada
+O aplicativo consulta dados de relacionamento no GitHub, organiza os resultados e apresenta as diferenças em abas objetivas:
+- Não seguidores (quem você segue, mas não te segue);
+- Não sigo (quem te segue, mas você não segue);
+- Mútuos (seguimento recíproco);
+- Novos não seguidores (mudanças detectadas entre consultas).
+
+Recursos principais
+- Interface gráfica direta, com foco em leitura rápida.
+- Cache local para reduzir chamadas desnecessárias.
+- Indicadores de origem de dados, rate limit e requisições usadas.
+- Ação de unfollow assistida para perfis selecionados.
+- Menu Arquivo com fluxo de Novo, Abrir, Salvar e Ajuda de atalhos.
+- Importação e exportação em JSON no formato de cache/estado do aplicativo.
+- Menu de idioma com alternância entre Português (Brasil) e Inglês (Estados Unidos).
+- Diálogos de Manual e Sobre com atualização dinâmica em troca de idioma.
+
+Privacidade e dados
+- Os dados são persistidos localmente no perfil do usuário.
+- O aplicativo não envia telemetria própria para terceiros.
+- O token do GitHub é utilizado apenas para autenticar consultas e ações necessárias.
+
+Requisitos
+- Python 3.10+ (execução por código-fonte) ou executável gerado.
+- Conexão com internet para atualização via GitHub API.
+- Token do GitHub para consultas GraphQL sem limitação de uso não autenticado.
+
+Uso rápido
+1. Informe seu usuário GitHub.
+2. Clique em "Executar".
+3. Analise as abas com os resultados.
+4. Opcionalmente, salve/exporte os dados para comparação futura.
+
+Suporte e contato
+Autor: Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+Relatar problemas: abra uma issue no repositório ou envie logs para análise.
+
+Licença e avisos
+Consulte os arquivos de licença, avisos legais e política de privacidade na pasta assets.
+
+Mensagem final
+Este projeto nasceu para resolver um incômodo real com simplicidade: menos adivinhação, mais contexto, e decisões melhores no seu networking técnico.

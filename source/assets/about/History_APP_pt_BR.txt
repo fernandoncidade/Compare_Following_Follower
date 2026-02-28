@@ -1,0 +1,67 @@
+HISTÓRIA DO PROJETO — Compare - Following and Follower
+
+Era uma vez um perfil no GitHub que seguia muita gente boa.
+Tudo parecia tranquilo até surgir a pergunta clássica:
+"Quem eu sigo que não me segue de volta?"
+
+CAPÍTULO 1 — O MISTÉRIO DOS SEGUIDORES
+No começo, a investigação era artesanal:
+abrir perfil por perfil, comparar listas no olho e torcer para não se perder no caminho.
+Resultado: café acabando, paciência acabando, e nenhuma resposta confiável.
+
+CAPÍTULO 2 — A ERA DAS PLANILHAS SOFREDORAS
+Veio então a fase "gambiarra premium":
+copiar nomes, colar em planilhas, filtrar, ordenar e rezar para não quebrar nada.
+Funcionava... até o volume crescer.
+A cada nova verificação, era praticamente um ritual medieval de dados.
+
+CAPÍTULO 3 — NASCE O Compare - Following and Follower
+Foi aí que o projeto ganhou forma:
+um app focado em clareza, velocidade e decisões práticas.
+A ideia era simples:
+- buscar seguidores e seguidos;
+- comparar automaticamente;
+- mostrar não seguidores, não seguidos e mútuos;
+- facilitar ações sem complicar a vida.
+
+CAPÍTULO 4 — DO "FUNCIONA AQUI" AO "FUNCIONA BEM"
+Com o tempo, o projeto evoluiu para algo mais sólido:
+- cache local para evitar consultas desnecessárias;
+- indicadores de status e rate limit;
+- interface com abas objetivas;
+- diálogo de Manual e Sobre;
+- suporte a múltiplos idiomas;
+- fluxo de importação/exportação em JSON.
+
+POR QUE ESTE PROJETO EXISTE
+Porque tempo é recurso finito.
+Automatizar comparações de relacionamento no GitHub economiza energia mental
+e evita decisões baseadas em suposição.
+
+OBJETIVOS
+- Entregar uma visão confiável das relações de follow.
+- Reduzir atrito no acompanhamento de mudanças entre consultas.
+- Manter experiência simples para uso cotidiano.
+- Priorizar controle local dos dados e transparência de operação.
+
+PÚBLICO-ALVO
+- Desenvolvedores que fazem networking técnico no GitHub.
+- Criadores de conteúdo que monitoram engajamento.
+- Pessoas curiosas que gostam de entender seus próprios dados.
+- Quem já cansou de "auditoria manual por sofrimento".
+
+PRINCÍPIOS DE DESIGN
+- Clareza acima de enfeite.
+- Ação rápida com baixo risco.
+- Dados locais sempre que possível.
+- Interface direta, com feedback explícito.
+
+IMPACTO ESPERADO
+- Menos tempo em tarefas repetitivas.
+- Mais confiança para decidir quem acompanhar.
+- Melhor percepção de mudanças entre snapshots.
+
+EPÍLOGO
+No fim das contas, o Compare - Following and Follower é um detetive digital:
+não julga ninguém, não cria drama, só organiza os fatos.
+E, quando necessário, ainda aponta exatamente onde está o "plot twist" da sua lista de follows.

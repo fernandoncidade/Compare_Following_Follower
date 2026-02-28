@@ -1,0 +1,50 @@
+Project: Compare - Following and Follower
+Version: 2026.2.26.0
+Author: Fernando Nillsson Cidade
+
+What is this project?
+Compare - Following and Follower is a desktop app to compare, in a practical way, who you follow and who follows you on GitHub. A tool to turn large follower lists into clear decisions, without opening profile by profile.
+
+Detailed description
+The app queries relationship data on GitHub, organizes the results, and presents the differences in objective tabs:
+- Non-followers (who you follow, but who do not follow you back);
+- I do not follow (who follows you, but you do not follow);
+- Mutuals (reciprocal follow);
+- New non-followers (changes detected between checks).
+
+Key features
+- Direct graphical interface focused on quick reading.
+- Local cache to reduce unnecessary calls.
+- Data source, rate limit, and used request indicators.
+- Assisted unfollow action for selected profiles.
+- File menu flow with New, Open, Save, and shortcut Help.
+- JSON import and export in the app cache/state format.
+- Language menu with switch between Portuguese (Brazil) and English (United States).
+- Manual and About dialogs with dynamic updates on language change.
+
+Privacy and data
+- Data is stored locally in the user profile.
+- The app does not send its own telemetry to third parties.
+- The GitHub token is used only to authenticate required queries and actions.
+
+Requirements
+- Python 3.10+ (source execution) or generated executable.
+- Internet connection for updates via GitHub API.
+- GitHub token for GraphQL queries without unauthenticated usage limits.
+
+Quick use
+1. Enter your GitHub username.
+2. Click "Run".
+3. Review the tabs with results.
+4. Optionally save/export data for future comparison.
+
+Support and contact
+Author: Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+Report issues: open an issue in the repository or send logs for analysis.
+
+License and notices
+Check the license files, legal notices, and privacy policy in the assets folder.
+
+Final message
+This project was born to solve a real annoyance with simplicity: less guessing, more context, and better decisions in your technical networking.

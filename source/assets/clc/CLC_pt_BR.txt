@@ -1,0 +1,97 @@
+CONTRATO DE LICENCIAMENTO COMERCIAL - Compare - Following and Follower
+Versao: 2026.2.26.0
+Data: 26 de fevereiro de 2026
+
+Este Contrato de Licenciamento Comercial ("Contrato") e celebrado entre:
+
+LICENCIADOR: Fernando Nillsson Cidade, doravante "LICENCIADOR".
+LICENCIADO: a pessoa fisica ou juridica que adquire licenca comercial do software Compare - Following and Follower, doravante "LICENCIADO".
+
+PREAMBULO
+Este Contrato complementa os termos da Licenca de Uso de Usuario Final (EULA) e da Politica de Privacidade incluidos no pacote do aplicativo. O objeto deste Contrato e regular condicoes comerciais de uso, suporte, atualizacoes e responsabilidades relativas ao Compare - Following and Follower (tambem identificado na interface como GitHub Follow Compare), aplicativo para comparacao de seguidores/seguidos no GitHub, com recursos de leitura de cache local, importacao/exportacao de JSON e acao assistida de unfollow.
+
+1. OBJETO
+1.1 O LICENCIADOR concede ao LICENCIADO o direito de uso do software Compare - Following and Follower conforme a modalidade comercial contratada.
+1.2 Salvo previsao expressa em contrato especifico, a licenca cobre o uso do executavel e da documentacao, nao implicando cessao de propriedade intelectual.
+
+2. MODALIDADES DE LICENCIAMENTO
+2.1 Licenca Individual
+ a) Uso por um unico usuario.
+ b) Instalacao em ate 2 (dois) dispositivos de propriedade do LICENCIADO.
+ c) Suporte por e-mail durante o prazo contratado.
+
+2.2 Licenca Equipe
+ a) Uso por equipe interna da mesma organizacao, ate o limite contratado.
+ b) Suporte prioritario por e-mail.
+ c) Atualizacoes corretivas durante o prazo contratado.
+
+2.3 Licenca Enterprise
+ a) Condicoes de uso, quantidade de instalacoes e SLA definidos em proposta comercial especifica.
+ b) Pode incluir treinamento, customizacao e suporte estendido, quando contratado.
+
+3. PAGAMENTO E FATURAMENTO
+3.1 Valores, prazos e forma de pagamento serao definidos na proposta comercial aceita pelas partes.
+3.2 O nao pagamento pode suspender suporte e atualizacoes comerciais ate regularizacao.
+
+4. PRAZO E RENOVACAO
+4.1 O prazo de vigencia e o definido na modalidade contratada.
+4.2 A renovacao de suporte e atualizacoes depende de nova contratacao. A continuidade de uso da versao ja licenciada permanece permitida, salvo inadimplemento ou violacao contratual.
+
+5. SUPORTE E ATUALIZACOES
+5.1 O suporte cobre orientacoes de instalacao, uso das funcionalidades documentadas e tratamento de defeitos reproduziveis.
+5.2 O LICENCIADOR podera disponibilizar atualizacoes corretivas e evolutivas conforme sua politica de versoes e disponibilidade tecnica.
+5.3 Mudancas em APIs externas (ex.: GitHub API) podem exigir ajustes tecnicos e podem impactar funcionalidades ate atualizacao compativel.
+
+6. DADOS, PRIVACIDADE E SEGURANCA
+6.1 O aplicativo armazena dados localmente no diretorio padrao:
+    %LOCALAPPDATA%\FollowersFollowingGitHub
+6.2 Arquivos principais de persistencia local:
+    - .github_follow_compare_cache.json
+    - .github_follow_compare_state.json
+6.3 O token de autenticacao do GitHub e lido da variavel de ambiente GITHUB_TOKEN e nao e gravado automaticamente nos arquivos de cache/estado pelo aplicativo.
+6.4 O aplicativo nao envia telemetria propria automaticamente. Comunicacoes de rede ocorrem quando o usuario executa consultas ou acoes no GitHub.
+6.5 O tratamento de dados pessoais, quando aplicavel, segue a Politica de Privacidade incluida no pacote.
+
+7. COMPONENTES DE TERCEIROS E APIS EXTERNAS
+7.1 O projeto utiliza componentes de terceiros (por exemplo PySide6, requests e componentes transitivos), sujeitos a suas respectivas licencas.
+7.2 O uso das APIs do GitHub e regido pelos termos do proprio GitHub, inclusive limites de taxa, regras de uso e politicas de seguranca.
+7.3 Textos de licencas e avisos de terceiros acompanham o pacote em assets/licenses, assets/notices e arquivos correlatos.
+
+8. LIMITACAO DE RESPONSABILIDADE
+8.1 O software e fornecido "no estado em que se encontra".
+8.2 Na extensao maxima permitida por lei, o LICENCIADOR nao responde por danos indiretos, lucros cessantes, perda de oportunidade ou indisponibilidade decorrente de mudancas de servicos de terceiros.
+8.3 Quando admitida responsabilidade, o limite total sera o valor efetivamente pago pela licenca no periodo contratual ou R$ 5,00, o que for maior, salvo disposicao legal obrigatoria em sentido diverso.
+
+9. OBRIGACOES DO LICENCIADO
+9.1 Utilizar o software em conformidade com a legislacao aplicavel e com os termos deste Contrato, do EULA e das regras das APIs utilizadas.
+9.2 Nao remover avisos de copyright, marcas e licencas.
+9.3 Nao revender, sublicenciar ou redistribuir o executavel sem autorizacao expressa do LICENCIADOR.
+
+10. RESCISAO
+10.1 O Contrato pode ser rescindido por violacao contratual, inadimplemento ou por comum acordo.
+10.2 Em caso de rescisao por culpa do LICENCIADO, valores pagos nao sao reembolsaveis, salvo ajuste escrito em contrario.
+
+11. PROPRIEDADE INTELECTUAL E MARCAS
+11.1 Compare - Following and Follower, GitHub Follow Compare, codigo, textos e ativos visuais do projeto sao de titularidade do LICENCIADOR, salvo componentes de terceiros.
+11.2 "GitHub" e demais marcas associadas pertencem aos seus respectivos titulares. Este projeto nao e afiliado, patrocinado ou endossado pelo GitHub, Inc.
+
+12. LEI APLICAVEL E FORO
+12.1 Este Contrato sera regido pelas leis da Republica Federativa do Brasil.
+12.2 Fica eleito o foro da Comarca de Sao Jose dos Pinhais, Estado do Parana, Brasil, salvo disposicao legal obrigatoria em contrario.
+
+13. DISPOSICOES GERAIS
+13.1 Este Contrato integra, com o EULA, a Politica de Privacidade e os avisos de terceiros, o conjunto de termos aplicaveis ao uso comercial do software.
+13.2 Qualquer alteracao deste Contrato deve ser formalizada por escrito.
+13.3 A eventual invalidade de uma clausula nao invalida as demais.
+
+Contato comercial, suporte e privacidade:
+- Autor / LICENCIADOR: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+- Repositorio e suporte tecnico: consulte os canais do projeto.
+
+Assinaturas:
+_____________________________________
+Fernando Nillsson Cidade - LICENCIADOR
+
+_____________________________________
+LICENCIADO (nome e assinatura)

@@ -1,0 +1,87 @@
+LICENCA DE USO DE USUARIO FINAL (EULA) - Compare - Following and Follower
+Versao 2026.2.26.0, 26 de fevereiro de 2026
+
+Copyright (C) 2026 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+Ao instalar, copiar ou utilizar o software, voce concorda com os termos desta Licenca. Se nao concordar, nao instale nem utilize o software.
+
+1. DEFINICOES
+"Licenciador": Fernando Nillsson Cidade.
+"Software": Compare - Following and Follower (tambem identificado como GitHub Follow Compare), incluindo executavel, codigo-fonte, recursos embarcados e documentacao.
+"Usuario" ou "Licenciado": pessoa fisica ou juridica que instala ou utiliza o software.
+
+2. CONCESSAO DE LICENCA
+2.1 E concedida licenca limitada, nao exclusiva, intransferivel e revogavel para uso pessoal, educacional ou profissional do software.
+2.2 O uso comercial pode exigir contratacao adicional especifica (CLC), quando aplicavel.
+
+3. ESCOPO DE USO
+3.1 O software pode ser distribuido como codigo-fonte ou executavel empacotado.
+3.2 O usuario pode utilizar o software para comparar seguidores e seguidos, analisar mudancas entre consultas e executar acoes permitidas pela propria conta GitHub.
+
+4. RESTRICOES
+Voce nao pode:
+a) remover ou alterar avisos de copyright, marcas e licencas;
+b) redistribuir o executavel como produto proprio sem autorizacao;
+c) usar o software para atividades ilegais ou em violacao dos termos de servicos utilizados;
+d) tentar burlar limites tecnicos de APIs externas de forma indevida.
+
+5. COMUNICACAO COM APIS EXTERNAS
+5.1 Quando acionado pelo usuario, o software pode realizar chamadas HTTPS para a API do GitHub, incluindo endpoints GraphQL e REST.
+5.2 A acao de unfollow, quando utilizada, e executada na conta autenticada do proprio usuario.
+5.3 O uso da API do GitHub esta sujeito aos termos e politicas do GitHub, inclusive limites de taxa e regras de seguranca.
+
+6. TOKEN E CREDENCIAIS
+6.1 O token de autenticacao e obtido da variavel de ambiente GITHUB_TOKEN.
+6.2 O software nao grava automaticamente o valor do token nos arquivos de cache/estado do aplicativo.
+6.3 E responsabilidade do usuario proteger suas credenciais e evitar compartilhamento indevido.
+
+7. ARMAZENAMENTO LOCAL DE DADOS
+7.1 Por padrao, os dados sao armazenados localmente em:
+    %LOCALAPPDATA%\FollowersFollowingGitHub
+7.2 Arquivos de persistencia principais:
+    - .github_follow_compare_cache.json
+    - .github_follow_compare_state.json
+7.3 O usuario pode limpar, importar e exportar dados JSON por funcionalidades da interface.
+
+8. PRIVACIDADE
+8.1 O software nao envia telemetria propria automaticamente.
+8.2 O trafego de rede ocorre quando o usuario solicita operacoes envolvendo a conta GitHub.
+8.3 O tratamento de dados segue a Politica de Privacidade incluida no pacote.
+
+9. COMPONENTES DE TERCEIROS
+9.1 O software utiliza componentes de terceiros (por exemplo PySide6, requests e dependencias transitivas), cada um sujeito a sua propria licenca.
+9.2 Os avisos de terceiros estao descritos em assets/notices e assets/licenses.
+
+10. ATUALIZACOES E SUPORTE
+10.1 O Licenciador pode disponibilizar atualizacoes, correcoes e novas versoes sem obrigacao de periodicidade minima.
+10.2 Suporte tecnico pode ser oferecido pelos canais informados no projeto.
+
+11. GARANTIA E LIMITACAO DE RESPONSABILIDADE
+11.1 O software e fornecido "no estado em que se encontra", sem garantias de resultado especifico.
+11.2 Na extensao maxima permitida por lei, o Licenciador nao responde por danos indiretos, lucros cessantes, indisponibilidade de servicos de terceiros ou perdas decorrentes do uso/incapacidade de uso.
+11.3 Quando aplicavel, a responsabilidade total do Licenciador limita-se ao valor pago pelo software no periodo contratual ou R$ 5,00, o que for maior.
+
+12. RESCISAO
+12.1 Esta Licenca pode ser rescindida em caso de violacao de seus termos.
+12.2 Em caso de rescisao, o usuario deve cessar o uso e remover copias nao autorizadas, conforme aplicavel.
+
+13. PROPRIEDADE INTELECTUAL E MARCAS
+13.1 Compare - Following and Follower e GitHub Follow Compare sao identificadores do projeto do Licenciador.
+13.2 "GitHub" e marcas relacionadas pertencem aos respectivos titulares.
+13.3 Este projeto nao e afiliado, patrocinado ou endossado pelo GitHub, Inc.
+
+14. LEI APLICAVEL E FORO
+14.1 Esta Licenca sera regida pelas leis da Republica Federativa do Brasil.
+14.2 Fica eleito o foro da Comarca de Sao Jose dos Pinhais, Estado do Parana, Brasil, salvo disposicao legal obrigatoria em contrario.
+
+15. ACORDO INTEGRAL
+15.1 Este EULA, a Politica de Privacidade e os avisos/licencas de terceiros constituem o acordo integral de uso.
+
+Contato:
+- Autor: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+Referencias internas:
+- Politica de Privacidade: assets/privacy_policy/Privacy_Policy_pt_BR.txt
+- Avisos de terceiros: assets/notices/NOTICE_pt_BR.txt
+- Contrato comercial: assets/clc/CLC_pt_BR.txt

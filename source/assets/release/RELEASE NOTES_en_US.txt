@@ -1,0 +1,64 @@
+RELEASE NOTES - Compare - Following and Follower
+Version: 2026.2.26.0
+Date: February 26, 2026
+
+Version summary
+This version marks the consolidation of the Compare - Following and Follower project as an app focused on
+GitHub relationship comparison, with a more complete usage flow, useful shortcuts,
+and a better organized interface experience.
+
+Main updates
+- New File menu with actions:
+  - New: clears displayed data and resets local cache/state files.
+  - Open: imports .json files compatible with the app format.
+  - Save: exports consolidated data to .json.
+  - Help: shows the list of available shortcuts.
+  - Close: exits the application.
+
+- Refined menu structure:
+  - Settings now contains only Language.
+  - Options keeps Manual and About.
+  - More intuitive organization for daily navigation.
+
+- Keyboard shortcuts implemented/adjusted:
+  - Ctrl+N (New)
+  - Ctrl+O (Open)
+  - Ctrl+S (Save)
+  - F1 (Shortcut help)
+  - Ctrl+Q (Close)
+  - Alt+I (Language)
+  - Ctrl+Shift+M (Manual)
+  - Ctrl+Shift+A (About)
+
+- Data import and export:
+  - JSON structure validation to prevent invalid loads.
+  - Support for a single package containing cache + state.
+  - Clear success and failure messages during persistence.
+
+- Translations and internationalization:
+  - Inclusion of missing translation keys in pt-BR and en-US.
+  - Coverage of menu texts, operational messages, and About helper keys.
+
+Usability improvements
+- "New/Open/Save" flow is now more predictable and confirmation-oriented.
+- Shortcut help dialog expanded with actions that are actually available in the app.
+- Error and status messages are more consistent for file actions.
+
+Window behavior adjustments
+- Manual and About remain independent to allow focus on the main window.
+- Closing the main GUI automatically closes auxiliary windows.
+
+Compatibility and data
+- Local files remain compatible with the project format.
+- Persistent cache/state structure is preserved.
+- No manual migration is required.
+
+Suggested next steps
+- Evolve export to include date/time versioned snapshots.
+- Add visual comparison between two exported files.
+- Expand indicators for historical network growth metrics.
+
+Final note
+If this version were a story, it would be the chapter where the app stops being
+"a useful tool" and becomes "a social audit companion on GitHub."
+Less chaos, more context.

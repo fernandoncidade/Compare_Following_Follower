@@ -1,0 +1,67 @@
+PROJECT HISTORY - Compare - Following and Follower
+
+Once upon a time, there was a GitHub profile following many great people.
+Everything seemed calm until the classic question appeared:
+"Who do I follow that does not follow me back?"
+
+CHAPTER 1 - THE FOLLOWER MYSTERY
+At first, the investigation was manual:
+open profile by profile, compare lists by eye, and hope not to get lost on the way.
+Result: coffee running out, patience running out, and no reliable answer.
+
+CHAPTER 2 - THE ERA OF SUFFERING SPREADSHEETS
+Then came the "premium workaround" phase:
+copy names, paste into spreadsheets, filter, sort, and pray nothing breaks.
+It worked... until the volume grew.
+Each new check was almost a medieval data ritual.
+
+CHAPTER 3 - Compare - Following and Follower IS BORN
+That is when the project took shape:
+an app focused on clarity, speed, and practical decisions.
+The idea was simple:
+- fetch followers and following;
+- compare automatically;
+- show non-followers, not-followed-back users, and mutuals;
+- make actions easier without complicating life.
+
+CHAPTER 4 - FROM "WORKS HERE" TO "WORKS WELL"
+Over time, the project evolved into something more solid:
+- local cache to avoid unnecessary queries;
+- status and rate limit indicators;
+- interface with objective tabs;
+- Manual and About dialogs;
+- support for multiple languages;
+- JSON import/export flow.
+
+WHY THIS PROJECT EXISTS
+Because time is a finite resource.
+Automating GitHub relationship comparisons saves mental energy
+and avoids decisions based on guesswork.
+
+OBJECTIVES
+- Deliver a reliable view of follow relationships.
+- Reduce friction in tracking changes between checks.
+- Keep the daily-use experience simple.
+- Prioritize local data control and operation transparency.
+
+TARGET AUDIENCE
+- Developers who do technical networking on GitHub.
+- Content creators who monitor engagement.
+- Curious people who like to understand their own data.
+- Anyone already tired of "manual audit by suffering."
+
+DESIGN PRINCIPLES
+- Clarity over decoration.
+- Fast action with low risk.
+- Local data whenever possible.
+- Direct interface, with explicit feedback.
+
+EXPECTED IMPACT
+- Less time spent on repetitive tasks.
+- More confidence to decide whom to follow.
+- Better visibility into changes between snapshots.
+
+EPILOGUE
+At the end of the day, Compare - Following and Follower is a digital detective:
+it does not judge anyone, does not create drama, it only organizes the facts.
+And, when needed, it still points out exactly where the "plot twist" is in your follow list.

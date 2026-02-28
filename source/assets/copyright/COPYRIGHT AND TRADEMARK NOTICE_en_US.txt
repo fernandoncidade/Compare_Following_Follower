@@ -1,0 +1,38 @@
+COPYRIGHT AND TRADEMARK NOTICE - Compare - Following and Follower
+Version 2026.2.26.0, February 26, 2026
+
+Copyright (C) 2026 Fernando Nillsson Cidade. All rights reserved.
+
+INTELLECTUAL PROPERTY
+- The Compare - Following and Follower software (also identified as GitHub Follow Compare), its source code, interface, documentation, and visual assets are protected by copyright law.
+- Unless explicitly stated otherwise, project content is owned by Fernando Nillsson Cidade.
+
+TRADEMARKS
+- "Compare - Following and Follower" and "GitHub Follow Compare" are identifiers of this software project.
+- "GitHub" and related marks belong to their respective owners, including GitHub, Inc.
+- This project is not affiliated with, sponsored by, or endorsed by GitHub, Inc.
+
+USAGE PERMISSIONS AND RESTRICTIONS
+- Use of the software must comply with the EULA included in the package.
+- Removing or altering copyright, trademark, or license notices is not allowed.
+- Redistribution of the executable or modified versions must follow applicable license terms and required authorizations.
+
+THIRD-PARTY COMPONENTS
+- The project uses third-party components (for example PySide6, requests, and transitive dependencies), subject to their respective licenses.
+- Third-party notices and license texts are available in assets/notices and assets/licenses.
+
+DATA AND PRIVACY
+- By default, the application stores data locally at %LOCALAPPDATA%\FollowersFollowingGitHub.
+- Main local files: .github_follow_compare_cache.json and .github_follow_compare_state.json.
+- The application does not automatically send proprietary telemetry.
+- For data handling details, see the project's Privacy Policy.
+
+CONTACT FOR LICENSING AND TRADEMARK USE
+- Author / Responsible: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+INTERNAL REFERENCES
+- EULA: assets/eula/EULA_en_US.txt
+- Privacy Policy: assets/privacy_policy/Privacy_Policy_en_US.txt
+- Third-party notices: assets/notices/NOTICE_en_US.txt
+- Commercial agreement: assets/clc/CLC_en_US.txt

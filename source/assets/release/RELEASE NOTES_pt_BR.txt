@@ -1,0 +1,64 @@
+NOTAS DE LANÇAMENTO — Compare - Following and Follower
+Versão: 2026.2.26.0
+Data: 26 de fevereiro de 2026
+
+Resumo da versão
+Esta versão marca a consolidação do projeto Compare - Following and Follower como um app focado em
+comparação de relacionamentos no GitHub, com fluxo de uso mais completo, atalhos úteis
+e experiência de interface mais organizada.
+
+Novidades principais
+- Novo menu Arquivo com ações:
+  - Novo: limpa os dados exibidos e reseta os arquivos locais de cache/estado.
+  - Abrir: importa arquivos .json compatíveis com o formato do aplicativo.
+  - Salvar: exporta dados consolidados em .json.
+  - Ajuda: exibe a lista de atalhos disponíveis.
+  - Fechar: encerra o aplicativo.
+
+- Estrutura de menus refinada:
+  - Configurações agora concentra apenas Idioma.
+  - Opções mantém Manual e Sobre.
+  - Organização mais intuitiva para navegação diária.
+
+- Atalhos de teclado implementados/ajustados:
+  - Ctrl+N (Novo)
+  - Ctrl+O (Abrir)
+  - Ctrl+S (Salvar)
+  - F1 (Ajuda de atalhos)
+  - Ctrl+Q (Fechar)
+  - Alt+I (Idioma)
+  - Ctrl+Shift+M (Manual)
+  - Ctrl+Shift+A (Sobre)
+
+- Importação e exportação de dados:
+  - Validação de estrutura JSON para evitar carregamentos inválidos.
+  - Suporte a pacote com cache + state em um único arquivo.
+  - Mensagens claras de sucesso e falha durante persistência.
+
+- Traduções e internacionalização:
+  - Inclusão das chaves de tradução faltantes em pt-BR e en-US.
+  - Cobertura de textos de menu, mensagens operacionais e chaves auxiliares do Sobre.
+
+Melhorias de usabilidade
+- Fluxo de "Novo/Abrir/Salvar" mais previsível e orientado por confirmação.
+- Diálogo de ajuda de atalhos ampliado com ações realmente disponíveis no app.
+- Mensagens de erro e status mais consistentes para ações de arquivo.
+
+Ajustes de comportamento de janelas
+- Manual e Sobre continuam independentes para permitir foco da janela principal.
+- Encerramento da GUI principal fecha automaticamente as janelas auxiliares.
+
+Compatibilidade e dados
+- Arquivos locais continuam compatíveis com o formato do projeto.
+- Estrutura persistente de cache/estado preservada.
+- Sem migração manual necessária.
+
+Próximos passos sugeridos
+- Evoluir exportação para incluir snapshots versionados por data/hora.
+- Adicionar comparação visual entre dois arquivos exportados.
+- Expandir indicadores para métricas históricas de crescimento de rede.
+
+Nota final
+Se esta versão fosse uma história, seria o capítulo em que o app deixa de ser
+"ferramenta útil" e vira "companheiro de auditoria social no GitHub".
+Menos caos, mais contexto.

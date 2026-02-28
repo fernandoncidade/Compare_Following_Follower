@@ -1,0 +1,58 @@
+THIRD-PARTY LICENSES AND ATTRIBUTION NOTICE - Compare - Following and Follower
+Version 2026.2.26.0, February 26, 2026
+
+1. PURPOSE
+This document describes third-party components relevant to distribution and use of Compare - Following and Follower, with references to full license texts.
+
+2. MAIN COMPONENTS
+2.1 PySide6 (Qt for Python)
+- Purpose: graphical interface (Qt Widgets), translations, and UI resources.
+- Licensing: LGPL (according to component distribution).
+- References: https://doc.qt.io/qtforpython/ and https://github.com/qt/pyside
+
+2.2 requests
+- Purpose: HTTP/HTTPS communication with the GitHub API.
+- Licensing: Apache License 2.0.
+- Reference: https://requests.readthedocs.io/
+
+2.3 Python Runtime
+- Purpose: application execution and standard libraries.
+- Licensing: Python Software Foundation License.
+- Reference: https://www.python.org/
+
+3. TRANSITIVE DEPENDENCIES
+Transitive dependencies may include components under MIT, BSD, ISC, and other compatible licenses. Applicable terms must be preserved in distribution.
+
+4. EXTERNAL API TERMS
+The software consumes GitHub APIs for compare and unfollow features. Use of those APIs must comply with GitHub terms, policies, and limits.
+
+5. WHERE TO FIND FULL LICENSES
+License texts included in the package are available in assets/licenses, including:
+- Apache License Version 2.0.txt
+- BSD License Clause-2.txt
+- BSD License Clause-3.txt
+- GNU LESSER GENERAL PUBLIC LICENSE Version 2.1.txt
+- GNU LESSER GENERAL PUBLIC LICENSE Version 3.txt
+- ISC LICENSE.txt
+- MIT License.txt
+- PYTHON SOFTWARE FOUNDATION LICENSE.txt
+
+6. REDISTRIBUTION OBLIGATIONS
+6.1 When redistributing the executable, preserve copyright, license, and attribution notices.
+6.2 For LGPL components, preserve applicable requirements (including notices and compliance documentation).
+6.3 Do not remove or alter legal texts included in the package.
+
+7. DATA AND PRIVACY
+- The application operates with local persistence at %LOCALAPPDATA%\FollowersFollowingGitHub.
+- Default files: .github_follow_compare_cache.json and .github_follow_compare_state.json.
+- The application does not automatically send proprietary telemetry.
+
+8. CONTACT
+For licensing, compliance, and attribution questions:
+- Author / Responsible: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+Internal references:
+- EULA: assets/eula/EULA_en_US.txt
+- Privacy Policy: assets/privacy_policy/Privacy_Policy_en_US.txt
+- Copyright and trademark notice: assets/copyright/COPYRIGHT AND TRADEMARK NOTICE_en_US.txt

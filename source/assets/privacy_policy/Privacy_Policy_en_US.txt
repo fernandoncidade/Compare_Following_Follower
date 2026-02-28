@@ -1,0 +1,74 @@
+PRIVACY POLICY - Compare - Following and Follower
+Last updated: February 26, 2026
+Version: 2026.2.26.0
+
+SUMMARY
+This Policy explains how Compare - Following and Follower handles data. The application is designed for local persistence and, by default, does not automatically send proprietary telemetry.
+
+1. SCOPE AND PRINCIPLES
+- User control: data remains under the user's control on the local device.
+- Data minimization: only data required for compare features is processed.
+- Transparency: users can clear, import, and export JSON data from the interface.
+
+2. DATA PROCESSED
+2.1 Data provided by the user
+- GitHub username entered in the interface.
+- JSON files manually selected for import.
+
+2.2 Data returned by external APIs (when requested by the user)
+- Followers and following lists.
+- Rate limit metadata and request status.
+- Results of unfollow actions explicitly requested by the user.
+
+2.3 Local technical data
+- Local cache and state in JSON files.
+- Local technical logs for diagnostics.
+- Interface settings and language preference.
+
+3. STORAGE LOCATION
+Default directory:
+%LOCALAPPDATA%\FollowersFollowingGitHub
+
+Main files:
+- .github_follow_compare_cache.json
+- .github_follow_compare_state.json
+
+4. TOKEN AND CREDENTIALS
+- The GitHub token is read from the GITHUB_TOKEN environment variable.
+- The application does not automatically store token values in cache/state files.
+- Token protection and rotation are the user's responsibility.
+
+5. NETWORK COMMUNICATION AND SHARING
+- The application performs HTTPS requests to GitHub APIs only when the user runs operations.
+- There is no automatic data transmission to proprietary analytics providers.
+- Other than required GitHub communication for requested features, there is no automatic sharing with third parties.
+
+6. IMPORT AND EXPORT
+- Users can open compatible JSON files and export a JSON package containing cache and state.
+- Read/write destination is chosen by the user.
+
+7. RETENTION AND DELETION
+- Data remains local until manually deleted by the user.
+- The "New" action can clear displayed data and reset default local files.
+
+8. SECURITY
+- Device and operating-system security directly affects data protection.
+- Regular backup of important JSON files and logs is recommended.
+- The application uses HTTPS for GitHub API communication.
+
+9. DATA SUBJECT RIGHTS
+Where applicable, users may exercise rights of access, correction, deletion, and portability through control of local files and by contacting the project owner.
+
+10. CHILDREN
+The application is not specifically directed to children and does not intentionally collect data from minors.
+
+11. POLICY CHANGES
+This Policy may be updated to reflect feature changes, legal requirements, or technical evolution. Date and version will be updated in the header.
+
+12. CONTACT
+Responsible: Fernando Nillsson Cidade
+E-mail: linceu_lighthouse@outlook.com
+
+Internal references:
+- EULA: assets/eula/EULA_en_US.txt
+- Third-party notices: assets/notices/NOTICE_en_US.txt

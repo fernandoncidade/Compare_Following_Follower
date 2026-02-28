@@ -1,0 +1,38 @@
+AVISO DE COPYRIGHT E MARCA REGISTRADA - Compare - Following and Follower
+Versao 2026.2.26.0, 26 de fevereiro de 2026
+
+Copyright (C) 2026 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+PROPRIEDADE INTELECTUAL
+- O software Compare - Following and Follower (tambem identificado como GitHub Follow Compare), seu codigo-fonte, interface, documentacao e ativos visuais sao protegidos por direitos autorais.
+- Salvo indicacao expressa em contrario, o conteudo do projeto e de titularidade de Fernando Nillsson Cidade.
+
+MARCAS
+- "Compare - Following and Follower" e "GitHub Follow Compare" sao identificadores do projeto deste software.
+- "GitHub" e marcas relacionadas pertencem aos seus respectivos titulares, incluindo GitHub, Inc.
+- Este projeto nao e afiliado, patrocinado ou endossado pelo GitHub, Inc.
+
+PERMISSOES E RESTRICOES DE USO
+- O uso do software deve respeitar os termos do EULA incluido no pacote.
+- Nao e permitido remover ou alterar avisos de copyright, marca ou licenca.
+- Redistribuicao do executavel ou de versoes modificadas deve observar os termos de licenca aplicaveis e autorizacoes necessarias.
+
+COMPONENTES DE TERCEIROS
+- O projeto utiliza componentes de terceiros (por exemplo PySide6, requests e dependencias transitivas), sujeitos as respectivas licencas.
+- Avisos e textos de licenca de terceiros estao disponiveis em assets/notices e assets/licenses.
+
+DADOS E PRIVACIDADE
+- O aplicativo armazena dados localmente, por padrao, em %LOCALAPPDATA%\FollowersFollowingGitHub.
+- Principais arquivos locais: .github_follow_compare_cache.json e .github_follow_compare_state.json.
+- O aplicativo nao envia telemetria propria automaticamente.
+- Para detalhes de tratamento de dados, consulte a Politica de Privacidade do projeto.
+
+CONTATO PARA LICENCIAMENTO E USO DE MARCA
+- Autor / Responsavel: Fernando Nillsson Cidade
+- E-mail: linceu_lighthouse@outlook.com
+
+REFERENCIAS INTERNAS
+- EULA: assets/eula/EULA_pt_BR.txt
+- Politica de Privacidade: assets/privacy_policy/Privacy_Policy_pt_BR.txt
+- Avisos de terceiros: assets/notices/NOTICE_pt_BR.txt
+- Contrato comercial: assets/clc/CLC_pt_BR.txt
