@@ -1,5 +1,5 @@
 Projeto: Compare - Following and Follower
-Versão: 2026.2.29.0
+Versão: 2026.3.1.0
 Autor: Fernando Nillsson Cidade
 
 O que é este projeto?

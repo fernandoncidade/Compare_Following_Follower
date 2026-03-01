@@ -1,5 +1,5 @@
 Project: Compare - Following and Follower
-Version: 2026.2.29.0
+Version: 2026.3.1.0
 Author: Fernando Nillsson Cidade
 
 What is this project?

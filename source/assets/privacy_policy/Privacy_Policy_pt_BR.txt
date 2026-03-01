@@ -1,6 +1,6 @@
 POLITICA DE PRIVACIDADE - Compare - Following and Follower
-Ultima atualizacao: 29 de fevereiro de 2026
-Versao: 2026.2.29.0
+Ultima atualizacao: 1 de março de 2026
+Versao: 2026.3.1.0
 
 RESUMO
 Esta Politica explica como o Compare - Following and Follower trata dados. O aplicativo foi projetado para operar com persistencia local e, por padrao, nao envia telemetria propria automaticamente.

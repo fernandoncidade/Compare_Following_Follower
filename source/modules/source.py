@@ -51,7 +51,7 @@ CONNECT_TIMEOUT = float(os.getenv("GITHUB_CONNECT_TIMEOUT", "10"))
 READ_TIMEOUT = float(os.getenv("GITHUB_READ_TIMEOUT", "30"))
 CACHE_TTL_SECONDS = int(os.getenv("FOLLOW_COMPARE_CACHE_TTL", "900"))
 APP_ICON_FILENAME_DARK = "FollowingFollower_256-256.ico"
-APP_ICON_FILENAME_CLEAR = "GitHubFollowersVazado_256-256.ico"
+APP_ICON_FILENAME_CLEAR = "FollowingFollower_256-256.ico"
 WINDOWS_APP_USER_MODEL_ID = "FollowingFollower.GitHubFollowCompare"
 
 

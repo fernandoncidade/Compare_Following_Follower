@@ -1,6 +1,6 @@
 NOTAS DE LANÇAMENTO — Compare - Following and Follower
-Versão: 2026.2.29.0
-Data: 29 de fevereiro de 2026
+Versão: 2026.3.1.0
+Data: 1 de março de 2026
 
 Resumo da versão
 Esta versão melhora a estabilidade do uso diário, deixa o fluxo de token mais discreto e torna o preenchimento de usuário mais inteligente.
@@ -16,6 +16,7 @@ Melhorias principais
 Melhorias de experiência
 - O reset ficou mais completo, removendo também informações usadas no preenchimento automático.
 - As mensagens de resultado ficaram mais claras sobre o que foi limpo.
+- Novos ícones.
 
 Compatibilidade e dados
 - Não é necessária migração manual.
