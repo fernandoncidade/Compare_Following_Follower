@@ -4,12 +4,17 @@ from PySide6.QtWidgets import QMessageBox
 from source.utils.LogManager import LogManager
 logger = LogManager.get_logger()
 
-def _unfollow_selected(self) -> None:
+def _unfollow_selected(self, target: str | None = None) -> None:
     try:
         if self._is_loading:
             return
 
-        selected_profiles = self._checked_new_non_followers()
+        if target == "non_followers":
+            selected_profiles = self._checked_non_followers()
+        elif target == "new_non_followers":
+            selected_profiles = self._checked_new_non_followers()
+        else:
+            selected_profiles = self._checked_non_followers() or self._checked_new_non_followers()
 
         if not selected_profiles:
             QMessageBox.information(self, self._tr("Unfollow"), self._tr("Selecione ao menos um perfil na lista."))

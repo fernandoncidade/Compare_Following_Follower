@@ -71,6 +71,7 @@ class CompareApp(QWidget):
             self.force_refresh_checkbox.setChecked(force_network_refresh)
             self.refresh_button = self.button_manager.create_button_with_auto_resize(min_padding=28)
             self.unfollow_button = self.button_manager.create_button_with_auto_resize(min_padding=28)
+            self.unfollow_non_followers_button = self.button_manager.create_button_with_auto_resize(min_padding=28)
             self.counts_label = QLabel()
             self.cache_label = QLabel()
             self.rate_label = QLabel()
@@ -80,6 +81,7 @@ class CompareApp(QWidget):
             self.nao_retribuem_text = QPlainTextEdit()
             self.eu_nao_retribuo_text = QPlainTextEdit()
             self.mutuos_text = QPlainTextEdit()
+            self.nao_seguidores_list = QListWidget()
             self.novos_nao_seguidores_list = QListWidget()
             self.tabs: QTabWidget | None = None
             self._menu_bar_ui: CompareMenuBar | None = None
@@ -212,14 +214,16 @@ class CompareApp(QWidget):
             self._tab_followers_index = self._configure_tab(self.tabs, self._tab_title_followers, self.followers_text)
             self._tab_following_index = self._configure_tab(self.tabs, self._tab_title_following, self.following_text)
             self._tab_mutuals_index = self._configure_tab(self.tabs, self._tab_title_mutuals, self.mutuos_text)
-            self._tab_non_followers_index = self._configure_tab(self.tabs, self._tab_title_non_followers, self.nao_retribuem_text)
+            self._tab_non_followers_index = self._configure_non_followers_tab(self.tabs)
             self._tab_non_following_index = self._configure_tab(self.tabs, self._tab_title_non_following, self.eu_nao_retribuo_text)
             self._tab_new_non_followers_index = self._configure_new_non_followers_tab(self.tabs)
             main_layout.addWidget(self.tabs, stretch=1)
 
             self.refresh_button.clicked.connect(self.refresh)
-            self.unfollow_button.clicked.connect(self._unfollow_selected)
+            self.unfollow_button.clicked.connect(lambda: self._unfollow_selected(target="new_non_followers"))
+            self.unfollow_non_followers_button.clicked.connect(lambda: self._unfollow_selected(target="non_followers"))
             self.novos_nao_seguidores_list.itemChanged.connect(self._update_unfollow_button_state)
+            self.nao_seguidores_list.itemChanged.connect(self._update_unfollow_button_state)
             self._update_unfollow_button_state()
             self.button_manager.update_all_button_sizes()
 

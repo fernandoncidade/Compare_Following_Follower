@@ -15,7 +15,7 @@
 
 # Compare - Following and Follower
 
-Versão: 2026.3.1.0
+Versão: 2026.8.8.0
 Autor: Fernando Nillsson Cidade
 
 ## Resumo
@@ -40,6 +40,9 @@ Uma ferramenta para transformar listas grandes de seguidores em decisões claras
 - Menu de idioma com alternância entre Português (Brasil) e Inglês (Estados Unidos).
 
 ## Novidades e melhorias recentes
+- Os botões de Unfollow agora atualizam dinamicamente para exibir a quantidade exata de perfis selecionados (ex: "Deixar de seguir (2)").
+- A tradução do texto dos botões de Unfollow ocorre em tempo de execução, respeitando instantaneamente a troca de idioma pela interface.
+- Correção no script de compilação de traduções para suportar corretamente a execução em ambientes virtuais (venv).
 - Configuração de token pela interface em **Configurações > Definir token GitHub** (`Ctrl+Shift+T`), com prompt para colar o token.
 - Persistência do token no Windows com `setx` em dois escopos:
   - Usuário: `setx GITHUB_TOKEN "seu_token"`
@@ -491,7 +494,7 @@ Consulte os arquivos de licença, avisos legais, EULA e política de privacidade
 
 # Compare - Following and Follower
 
-Version: 2026.3.1.0
+Version: 2026.8.8.0
 Author: Fernando Nillsson Cidade
 
 ## Summary
@@ -516,6 +519,9 @@ A tool to turn large follower lists into clear decisions without opening profile
 - Language menu with Portuguese (Brazil) and English (United States).
 
 ## Recent updates and improvements
+- The Unfollow buttons now dynamically update to display the exact number of selected profiles (e.g., "Unfollow (2)").
+- The Unfollow button translation happens in runtime and instantly reflects any language changes made in the UI.
+- Improved the language compilation script to properly support execution within virtual environments (venv).
 - Token setup via UI in **Settings > Set GitHub token** (`Ctrl+Shift+T`), with a dialog to paste the token.
 - Windows token persistence using `setx` in both scopes:
   - User: `setx GITHUB_TOKEN "your_token"`

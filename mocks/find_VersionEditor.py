@@ -12,7 +12,7 @@ _project_root_str = str(_project_root)
 if _project_root_str not in sys.path:
     sys.path.insert(0, _project_root_str)
 
-from PySide6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, 
+from PySide6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
                                QSpinBox, QComboBox, QPushButton, QTextEdit, QGroupBox, QFileDialog)
 from PySide6.QtGui import QIcon
 from source.utils.IconUtils import get_icon_path

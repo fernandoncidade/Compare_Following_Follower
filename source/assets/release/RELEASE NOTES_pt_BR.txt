@@ -1,4 +1,18 @@
 NOTAS DE LANÇAMENTO — Compare - Following and Follower
+Versão: 2026.8.8.0
+Data: 8 de agosto de 2026
+
+Resumo da versão
+Esta versão aprimora a clareza e interatividade do Unfollow assistido, além de garantir maior compatibilidade na compilação de idiomas quando utilizada em ambientes virtuais (venv).
+
+Melhorias principais
+- Os botões de Unfollow agora atualizam dinamicamente para mostrar a quantidade exata de perfis selecionados para ação (ex: "Deixar de seguir (2)").
+- A atualização do texto dos botões de Unfollow agora ocorre em tempo de execução e respeita a troca instantânea de idiomas pela interface.
+- Correção no script de compilação de idiomas (tr_02_compileTranslations.py) para utilizar o executável do ambiente virtual ativo de forma consistente, evitando erros de "arquivo não encontrado" (WinError 2).
+
+_________________________________________________
+
+NOTAS DE LANÇAMENTO — Compare - Following and Follower
 Versão: 2026.3.1.0
 Data: 1 de março de 2026
 

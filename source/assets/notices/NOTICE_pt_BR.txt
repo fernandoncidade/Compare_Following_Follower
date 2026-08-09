@@ -1,5 +1,5 @@
 AVISO DE LICENCAS E ATRIBUICOES DE TERCEIROS - Compare - Following and Follower
-Versao 2026.3.1.0, 1 de março de 2026
+Versao 2026.8.8.0, 8 de agosto de 2026
 
 1. OBJETIVO
 Este documento descreve componentes de terceiros relevantes para distribuicao e uso do Compare - Following and Follower, bem como referencias para os textos completos de licenca.

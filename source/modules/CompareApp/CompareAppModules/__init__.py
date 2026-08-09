@@ -40,6 +40,7 @@ from .capp_35_shutdown_active_worker import _shutdown_active_worker
 from .capp_36_closeEvent import closeEvent
 from .capp_37_apply_translations import _apply_translations
 from .capp_38_configure_tab import _configure_tab
+from .capp_38b_configure_non_followers_tab import _configure_non_followers_tab
 from .capp_39_configure_new_non_followers_tab import _configure_new_non_followers_tab
 from .capp_40_format_tab_title import _format_tab_title
 from .capp_41_set_tab_count import _set_tab_count
@@ -73,6 +74,8 @@ from .capp_68_on_fetch_success import _on_fetch_success
 from .capp_69_on_fetch_error import _on_fetch_error
 from .capp_70_fill_new_non_followers import _fill_new_non_followers
 from .capp_71_checked_new_non_followers import _checked_new_non_followers
+from .capp_79_fill_non_followers import _fill_non_followers
+from .capp_80_checked_non_followers import _checked_non_followers
 from .capp_72_update_unfollow_button_state import _update_unfollow_button_state
 from .capp_73_unfollow_selected import _unfollow_selected
 from .capp_74_on_unfollow_success import _on_unfollow_success
@@ -120,6 +123,7 @@ def bind_compare_app_methods(cls: Type[object]) -> Type[object]:
     cls.closeEvent = closeEvent
     cls._apply_translations = _apply_translations
     cls._configure_tab = _configure_tab
+    cls._configure_non_followers_tab = _configure_non_followers_tab
     cls._configure_new_non_followers_tab = _configure_new_non_followers_tab
     cls._format_tab_title = staticmethod(_format_tab_title)
     cls._set_tab_count = _set_tab_count
@@ -153,6 +157,8 @@ def bind_compare_app_methods(cls: Type[object]) -> Type[object]:
     cls._on_fetch_error = _on_fetch_error
     cls._fill_new_non_followers = _fill_new_non_followers
     cls._checked_new_non_followers = _checked_new_non_followers
+    cls._fill_non_followers = _fill_non_followers
+    cls._checked_non_followers = _checked_non_followers
     cls._update_unfollow_button_state = _update_unfollow_button_state
     cls._unfollow_selected = _unfollow_selected
     cls._on_unfollow_success = _on_unfollow_success
@@ -201,6 +207,7 @@ __all__ = [
     "closeEvent",
     "_apply_translations",
     "_configure_tab",
+    "_configure_non_followers_tab",
     "_configure_new_non_followers_tab",
     "_format_tab_title",
     "_set_tab_count",
@@ -234,6 +241,8 @@ __all__ = [
     "_on_fetch_error",
     "_fill_new_non_followers",
     "_checked_new_non_followers",
+    "_fill_non_followers",
+    "_checked_non_followers",
     "_update_unfollow_button_state",
     "_unfollow_selected",
     "_on_unfollow_success",

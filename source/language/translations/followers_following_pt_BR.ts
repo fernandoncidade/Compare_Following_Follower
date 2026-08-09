@@ -31,7 +31,7 @@
 
     <message>
       <source>🗑️ Unfollow</source>
-      <translation>🗑️ Unfollow</translation>
+      <translation>🗑️ Deixar de seguir</translation>
     </message>
 
     <message>
@@ -186,7 +186,7 @@
 
     <message>
       <source>Unfollow</source>
-      <translation>Unfollow</translation>
+      <translation>Deixar de seguir</translation>
     </message>
 
     <message>

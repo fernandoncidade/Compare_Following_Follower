@@ -17,7 +17,7 @@ def _clear_reported_data(self) -> None:
         self._update_primary_tab_counts(non_followers=0, non_following=0, mutuals=0)
         self._fill_text(self.followers_text, self._followers_values)
         self._fill_text(self.following_text, self._following_values)
-        self._fill_text(self.nao_retribuem_text, self._non_followers_values)
+        self._fill_non_followers(self._non_followers_values)
         self._fill_text(self.eu_nao_retribuo_text, self._non_following_values)
         self._fill_text(self.mutuos_text, self._mutual_values)
         self._fill_new_non_followers([])

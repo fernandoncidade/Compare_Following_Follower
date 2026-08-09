@@ -154,7 +154,10 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
             ),
             ManualDetails(
                 summary="🔴 Não seguidores",
-                bullets=("Perfis que você segue, mas que não te seguem de volta.",),
+                bullets=(
+                    "Perfis que você segue, mas que não te seguem de volta.",
+                    "Itens dessa aba podem ser marcados para unfollow assistido.",
+                ),
             ),
             ManualDetails(
                 summary="🟡 Não sigo",
@@ -218,8 +221,8 @@ _DOC_PT_BR: tuple[ManualSection, ...] = (
         id="unfollow-assistido",
         title="Unfollow assistido",
         bullets=(
-            "A aba \"Não me seguem mais\" permite marcar perfis com checkbox.",
-            "O botão \"🗑️ Unfollow\" habilita apenas quando há itens marcados.",
+            "As abas \"Não seguidores\" e \"Não me seguem mais\" permitem marcar perfis com checkbox.",
+            "O botão \"🗑️ Deixar de seguir\" habilita apenas quando há itens marcados e atualiza dinamicamente para exibir a quantidade selecionada (ex: \"🗑️ Deixar de seguir (2)\").",
             "Antes de executar, o app pede confirmação.",
             "Ao concluir, exibe resumo de sucesso/falha e pode atualizar os dados automaticamente.",
         ),

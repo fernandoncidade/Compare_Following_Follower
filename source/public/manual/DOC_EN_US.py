@@ -154,7 +154,10 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
             ),
             ManualDetails(
                 summary="🔴 Non-followers",
-                bullets=("Accounts you follow that do not follow you back.",),
+                bullets=(
+                    "Accounts you follow that do not follow you back.",
+                    "Items in this tab can be checked for assisted unfollow.",
+                ),
             ),
             ManualDetails(
                 summary="🟡 I do not follow",
@@ -218,8 +221,8 @@ _DOC_EN_US: tuple[ManualSection, ...] = (
         id="assisted-unfollow",
         title="Assisted unfollow",
         bullets=(
-            "The \"No longer follow me\" tab allows selecting profiles using checkboxes.",
-            "The \"🗑️ Unfollow\" button is enabled only when at least one item is checked.",
+            "The \"Non-followers\" and \"No longer follow me\" tabs allow selecting profiles using checkboxes.",
+            "The \"🗑️ Unfollow\" button is enabled only when at least one item is checked, and it dynamically updates to show the selected count (e.g., \"🗑️ Unfollow (2)\").",
             "The app asks for confirmation before sending unfollow requests.",
             "After completion, it shows success/failure summary and may trigger automatic refresh.",
         ),

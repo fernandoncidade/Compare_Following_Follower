@@ -9,6 +9,8 @@ def _set_loading(self, value: bool) -> None:
         self.user_input.setDisabled(value)
         self.force_refresh_checkbox.setDisabled(value)
         self.novos_nao_seguidores_list.setDisabled(value)
+        if hasattr(self, "nao_seguidores_list"):
+            self.nao_seguidores_list.setDisabled(value)
         self._update_unfollow_button_state()
 
     except Exception as exc:

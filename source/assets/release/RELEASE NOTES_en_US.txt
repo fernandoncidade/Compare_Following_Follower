@@ -1,4 +1,18 @@
 RELEASE NOTES — Compare - Following and Follower
+Version: 2026.8.8.0
+Date: August 8, 2026
+
+Version summary
+This version improves the clarity and interactivity of the assisted Unfollow feature, and ensures greater compatibility in language compilation when used within virtual environments (venv).
+
+Main improvements
+- The Unfollow buttons now dynamically update to show the exact amount of profiles selected for action (e.g. "Unfollow (2)").
+- The Unfollow button text update now happens in runtime and instantly reflects any language changes made in the UI.
+- Fixed the language compilation script (tr_02_compileTranslations.py) to consistently use the active virtual environment's executable, preventing "file not found" errors (WinError 2).
+
+_________________________________________________
+
+RELEASE NOTES — Compare - Following and Follower
 Version: 2026.3.1.0
 Date: March 1, 2026
 
